@@ -15,7 +15,6 @@ const SideModal = ({ modal }) => {
                 {item.header}
               </h1>
               {item.content.map((resource) => {
-                console.log('resource', resource);
                 return (
                   <Link
                     className={

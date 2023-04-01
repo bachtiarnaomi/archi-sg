@@ -3,6 +3,7 @@ import { QuizContext } from '../helpers/Contexts';
 
 function QuizMenu({ year }) {
   const { gameState, setGameState } = useContext(QuizContext);
+
   return (
     <div className="quiz">
       <h1>{year} PPE</h1>

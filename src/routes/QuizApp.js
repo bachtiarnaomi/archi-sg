@@ -1,10 +1,10 @@
 import { Link } from 'react-router-dom';
 import { useState, useContext } from 'react';
-import QuizMenu from './QuizMenu';
-import Quiz from './Quiz';
-import QuizEnd from './QuizEnd';
+import QuizMenu from '../components/QuizMenu';
+import Quiz from '../components/Quiz';
+import QuizEnd from '../components/QuizEnd';
 import { QuizContext } from '../helpers/Contexts';
-import QuizReview from './QuizReview';
+import QuizReview from '../components/QuizReview';
 
 const QuizApp = ({ year }) => {
   const [gameState, setGameState] = useState('menu');

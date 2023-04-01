@@ -3,9 +3,9 @@ import './App.css';
 import Navbar from './components/Navbar';
 import Sidebar from './components/Sidebar';
 import NotFound from './components/NotFound';
-import QuizSelection from './components/QuizSelection';
-import Home from './components/Home';
-import QuizApp from './components/QuizApp';
+import QuizSelection from './routes/QuizSelection';
+import Home from './routes/Home';
+import QuizApp from './routes/QuizApp';
 function App() {
   return (
     <Router>

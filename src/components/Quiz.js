@@ -1,5 +1,6 @@
 import { useState, useContext, useRef, useEffect } from 'react';
-import { Questions } from '../helpers/QuestionBank';
+// import { Questions } from '../helpers/QuestionBank';
+import axios from 'axios';
 import { QuizContext } from '../helpers/Contexts';
 
 function Quiz({ year }) {
@@ -7,13 +8,27 @@ function Quiz({ year }) {
   const { score, setScore } = useContext(QuizContext);
   const [currQuestion, setCurrQuestion] = useState(0);
   const [selectedOption, setSelectedOption] = useState('');
-
-  const nQuestions = Questions[year]['mcq'].length;
+  const [questions, setQuestions] = useState([
+    {
+      prompt: '',
+      optionA: '',
+      optionB: '',
+      optionC: '',
+      answer: '',
+      explanation: '',
+    },
+  ]);
+  const [isLoading, setLoading] = useState(true);
+  useEffect(() => {
+    axios.get(`http://localhost:3003/quiz/?year=${year}`).then((res) => {
+      setQuestions(res.data[0].mcq);
+    });
+  }, []);
   const ref = useRef(null);
   const handleNextQuestion = () => {
     resetClasses();
     if (selectedOption === '') return;
-    if (Questions[year]['mcq'][currQuestion].answer == selectedOption) {
+    if (questions[currQuestion].answer == selectedOption) {
       setScore(score + 1);
     }
     setCurrQuestion(currQuestion + 1);
@@ -22,7 +37,7 @@ function Quiz({ year }) {
 
   const handleFinishQuiz = () => {
     // if (selectedOption === '') return;
-    if (Questions[year]['mcq'][currQuestion].answer == selectedOption) {
+    if (questions[currQuestion].answer == selectedOption) {
       setScore(score + 1);
     }
     setGameState('end');
@@ -47,9 +62,9 @@ function Quiz({ year }) {
       <h1>{year} Quiz</h1>
       <ProgressBar
         currQuestion={currQuestion}
-        nQuestions={nQuestions}
+        nQuestions={questions.length}
       ></ProgressBar>
-      <p className="prompt">{Questions[year]['mcq'][currQuestion].prompt}</p>
+      <p className="prompt">{questions[currQuestion].prompt}</p>
       <div ref={ref} id="options">
         <button
           className="option"
@@ -57,7 +72,7 @@ function Quiz({ year }) {
             handleClick(e, 'A');
           }}
         >
-          {Questions[year]['mcq'][currQuestion].optionA}
+          {questions[currQuestion].optionA}
         </button>
         <button
           className="option"
@@ -65,7 +80,7 @@ function Quiz({ year }) {
             handleClick(e, 'B');
           }}
         >
-          {Questions[year]['mcq'][currQuestion].optionB}
+          {questions[currQuestion].optionB}
         </button>
         <button
           className="option"
@@ -73,7 +88,7 @@ function Quiz({ year }) {
             handleClick(e, 'C');
           }}
         >
-          {Questions[year]['mcq'][currQuestion].optionC}
+          {questions[currQuestion].optionC}
         </button>
         <button
           className="option"
@@ -81,11 +96,11 @@ function Quiz({ year }) {
             handleClick(e, 'D');
           }}
         >
-          {Questions[year]['mcq'][currQuestion].optionD}
+          {questions[currQuestion].optionD}
         </button>
       </div>
 
-      {currQuestion == nQuestions - 1 ? (
+      {currQuestion == questions.length - 1 ? (
         <button className="action" onClick={handleFinishQuiz}>
           Submit
         </button>

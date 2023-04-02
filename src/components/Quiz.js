@@ -8,17 +8,8 @@ function Quiz({ year }) {
   const { score, setScore } = useContext(QuizContext);
   const [currQuestion, setCurrQuestion] = useState(0);
   const [selectedOption, setSelectedOption] = useState('');
-  const [questions, setQuestions] = useState([
-    {
-      prompt: '',
-      optionA: '',
-      optionB: '',
-      optionC: '',
-      answer: '',
-      explanation: '',
-    },
-  ]);
-  const [isLoading, setLoading] = useState(true);
+  const { questions, setQuestions } = useContext(QuizContext);
+  const { answers, setAnswers } = useContext(QuizContext);
   useEffect(() => {
     axios.get(`http://localhost:3003/quiz/?year=${year}`).then((res) => {
       setQuestions(res.data[0].mcq);
@@ -28,18 +19,24 @@ function Quiz({ year }) {
   const handleNextQuestion = () => {
     resetClasses();
     if (selectedOption === '') return;
+    const answer = selectedOption;
     if (questions[currQuestion].answer == selectedOption) {
       setScore(score + 1);
     }
+    answers.push(answer);
+    setAnswers(answers);
     setCurrQuestion(currQuestion + 1);
     setSelectedOption('');
   };
 
   const handleFinishQuiz = () => {
-    // if (selectedOption === '') return;
+    if (selectedOption === '') return;
+    const answer = selectedOption;
     if (questions[currQuestion].answer == selectedOption) {
       setScore(score + 1);
     }
+    answers.push(answer);
+    setAnswers(answers);
     setGameState('end');
   };
 
@@ -48,7 +45,6 @@ function Quiz({ year }) {
     resetClasses();
 
     e.currentTarget.className += ' option-active';
-    console.log(ref.current);
     setSelectedOption(ans);
   };
   const resetClasses = () => {

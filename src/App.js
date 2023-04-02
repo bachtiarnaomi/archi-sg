@@ -6,14 +6,30 @@ import NotFound from './components/NotFound';
 import QuizSelection from './routes/QuizSelection';
 import Home from './routes/Home';
 import QuizApp from './routes/QuizApp';
+import { useState } from 'react';
+import SideModal from './components/SideModal';
+import { SideContext } from './helpers/Contexts';
+
 function App() {
+  const [modal, setModal] = useState(false);
+  const [sidebar, setSidebar] = useState(true);
   return (
     <Router>
       <div className="App">
         <Navbar />
-        <Sidebar />
-
         <div className="content">
+          <SideContext.Provider
+            value={{
+              modal,
+              setModal,
+              sidebar,
+              setSidebar,
+            }}
+          >
+            <Sidebar />
+            <SideModal />
+          </SideContext.Provider>
+
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/past-year-paper/" element={<QuizSelection />}></Route>

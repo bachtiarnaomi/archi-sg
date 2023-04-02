@@ -8,6 +8,10 @@
   margin: 0;
   font-family: 'Quicksand';
   text-align: left;
+  background-color: #f9f4ee;
+}
+svg {
+  background-color: inherit;
 }
 p {
   white-space: pre-wrap;
@@ -20,22 +24,24 @@ ul {
 
 a {
   text-decoration: none;
+  background-color: inherit;
 }
 .App {
   /* background-color: #f9f4ee; */
   background-image: url('archi-sg-background.png');
+  background-color: #f9f4ee;
   background-position: bottom;
   background-repeat: no-repeat;
-  background-size: cover;
-  height: 100vh;
+  background-size: auto;
+  min-height: 100vh;
   margin: 0;
   padding: 0;
 }
 .home {
-  margin-left: 250px;
+  /* margin-left: 250px; */
   padding-left: 20px;
   padding-top: 10%;
-  position: absolute;
+  /* position: absolute; */
   height: 50vh;
   text-align: center;
   align-items: center;
@@ -82,19 +88,27 @@ a {
 
 .content {
   max-width: 100%;
+  display: flex;
   /* margin: 40px auto; */
   margin-top: 10px;
   /* padding: 20px; */
 }
 
 .sidebar {
+  width: 50px;
+  background-color: #f9f4ee;
+  display: flex;
+  transition: 350ms;
+}
+.sidebar.active {
   width: 250px;
   background-color: #f9f4ee;
   display: flex;
+  transition: 350ms;
 }
 
 .menu-bars {
-  margin-left: 2rem;
+  margin-left: 16px;
   font-size: 2rem;
   background: none;
 }
@@ -102,28 +116,41 @@ a {
 .nav-menu {
   background-color: #f9f4ee;
   width: 250px;
-  height: 50vh;
-  display: flex;
+  height: 100vh;
+  /* display: flex; */
   justify-content: center;
   position: fixed;
   top: 25%;
   left: -100%;
   transition: 850ms;
+  /* display: none; */
 }
 .nav-menu.active {
+  display: flex;
   left: 0;
   transition: 350ms;
 }
 .dropdown-menu {
   display: none;
+  margin-left: 250px;
+  position: absolute;
+  background-color: #d3c7b7;
+  /* width: 75%; */
+  width: calc(100% - 300px);
+  padding: 10px;
+  border-radius: 10px;
+  /* margin-left: 250px; */
+  z-index: 999;
   transition: 350ms;
 }
 .dropdown-menu.active {
   display: block;
   transition: 350ms;
+  z-index: 999;
 }
 
 .nav-text {
+  background-color: inherit;
   display: flex;
   justify-content: start;
   align-items: center;
@@ -145,10 +172,14 @@ a {
   border-radius: 4px;
 }
 
-.nav-text a:hover {
+.nav-text a:hover,
+.nav-text.selected {
   background-color: #d3c7b7;
 }
 
+.nav-text span {
+  background-color: inherit;
+}
 .nav-menu-items {
   width: 100%;
   padding: 0;
@@ -170,16 +201,23 @@ span {
 }
 
 .modal {
+  background-color: #d3c7b7;
   display: flex;
-  padding-left: 250px;
+  width: 100%;
+  overflow: scroll;
+  overflow-y: hidden;
+  gap: 15px;
 }
 .modal-section {
+  background-color: #d3c7b7;
   font-size: 14px;
   /* display: inline; */
   width: 300px;
+  min-width: 300px;
 }
 
 .resource-link {
+  background-color: inherit;
   display: block;
   padding-top: 4px;
 }
@@ -191,11 +229,11 @@ span {
 }
 
 .quiz-app {
-  padding-left: 250px;
-  max-width: 90%;
+  max-width: 70%;
 }
 .action {
   margin-top: 30px;
+  margin-bottom: 200px;
   width: 200px;
   height: 50px;
   /* margin: 5px; */
@@ -275,4 +313,46 @@ span {
   font-weight: bold;
   text-align: right;
   color: #333;
+}
+
+.review-question {
+  /* background-color: white; */
+  margin-bottom: 20px;
+  padding: 10px;
+  border: solid 1px;
+  /* border: 1px; */
+}
+
+.review-question p {
+  padding-bottom: 7px;
+}
+.bold {
+  font-weight: 600;
+  line-height: 20px;
+}
+
+.explanation {
+  padding: 10px;
+  background-color: #e9f5e8;
+}
+
+.dot {
+  height: 16px;
+  width: 16px;
+  background-color: white;
+  border: solid #d3c7b7;
+  border-radius: 50%;
+  display: inline-block;
+  padding: 5px;
+  margin: 0;
+}
+.selected {
+  background-color: GRAY;
+  /* color: #f2f2f2; */
+}
+
+.review-answer-container {
+  display: flex;
+  align-items: top;
+  gap: 5px;
 }

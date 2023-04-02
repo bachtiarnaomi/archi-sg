@@ -9,10 +9,32 @@ import QuizReview from '../components/QuizReview';
 const QuizApp = ({ year }) => {
   const [gameState, setGameState] = useState('menu');
   const [score, setScore] = useState(0);
+  const [answers, setAnswers] = useState([]);
+  const [questions, setQuestions] = useState([
+    [
+      {
+        prompt: '',
+        optionA: '',
+        optionB: '',
+        optionC: '',
+        answer: '',
+        explanation: '',
+      },
+    ],
+  ]);
   return (
     <div className="quiz-app">
       <QuizContext.Provider
-        value={{ gameState, setGameState, score, setScore }}
+        value={{
+          gameState,
+          setGameState,
+          score,
+          setScore,
+          answers,
+          setAnswers,
+          questions,
+          setQuestions,
+        }}
       >
         {gameState === 'menu' && <QuizMenu year={year} />}
         {gameState === 'quiz' && <Quiz year={year} />}

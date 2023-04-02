@@ -1,12 +1,20 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import * as FaIcons from 'react-icons/fa';
 import * as AiIcons from 'react-icons/ai';
 import { Link } from 'react-router-dom';
 import { SideModalData } from './SideModalData';
+import { SideContext } from '../helpers/Contexts';
 
-const SideModal = ({ modal }) => {
+const SideModal = () => {
+  const { modal, sidebar } = useContext(SideContext);
   return (
-    <div className={modal ? 'dropdown-menu active' : 'dropdown-menu'}>
+    <div
+      className={modal ? 'dropdown-menu active' : 'dropdown-menu'}
+      style={{
+        marginLeft: sidebar ? ' 250px' : ' 65px',
+        width: sidebar ? ' calc(100% - 265px)' : ' calc(100% - 80px)',
+      }}
+    >
       <div className="modal">
         {SideModalData.map((item, index) => {
           return (
@@ -29,12 +37,6 @@ const SideModal = ({ modal }) => {
                 );
               })}
             </div>
-            //   <ul key={index} className={item.cName}>
-            //     <Link to={item.path}>
-            //       {item.icon}
-            //       <span>{item.title}</span>
-            //     </Link>
-            //   </ul>
           );
         })}
       </div>

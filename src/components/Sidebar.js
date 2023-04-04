@@ -40,7 +40,7 @@ const Sidebar = () => {
                   </Link>
                 </li>
                 <li className="nav-text">
-                  <Link>
+                  <Link to="/logsheet">
                     <AiIcons.AiOutlineDownload />
                     <span>BOA Logsheet</span>
                   </Link>

@@ -15,6 +15,7 @@ svg {
 }
 p {
   white-space: pre-wrap;
+  background-color: inherit;
 }
 
 ul {
@@ -26,29 +27,48 @@ a {
   text-decoration: none;
   background-color: inherit;
 }
+img {
+  width: 100px;
+  height: 100px;
+}
 .App {
   /* background-color: #f9f4ee; */
   background-image: url('archi-sg-background.png');
+  /* background-image: url('archi-sg-background.png'); */
   background-color: #f9f4ee;
   background-position: bottom;
   background-repeat: no-repeat;
   background-size: auto;
   min-height: 100vh;
+  height: auto;
   margin: 0;
   padding: 0;
 }
 .home {
   /* margin-left: 250px; */
   padding-left: 20px;
-  padding-top: 10%;
+  padding-top: 5%;
+  padding-bottom: 5%;
+  width: 80%;
+  min-width: 400px;
+  max-width: 1000px;
   /* position: absolute; */
   height: 50vh;
   text-align: center;
   align-items: center;
 }
+.home h3 {
+  font-size: 24px;
+  background-color: #a2c2c4;
+}
+.communities h3 {
+  font-size: 24px;
+  background-color: #a2c2c4;
+}
 
 .home p {
   width: 100%;
+  font-size: 18px;
 }
 .navbar {
   padding: 10px;
@@ -87,6 +107,7 @@ a {
 }
 
 .content {
+  background-color: transparent;
   max-width: 100%;
   display: flex;
   /* margin: 40px auto; */
@@ -122,7 +143,7 @@ a {
   position: fixed;
   top: 25%;
   left: -100%;
-  transition: 850ms;
+  transition: 350ms;
   /* display: none; */
 }
 .nav-menu.active {
@@ -179,6 +200,7 @@ a {
 
 .nav-text span {
   background-color: inherit;
+  margin-left: 16px;
 }
 .nav-menu-items {
   width: 100%;
@@ -194,10 +216,24 @@ a {
   align-items: center;
 }
 
-span {
-  margin-left: 16px;
-
-  /* color: #f2f2f2; */
+.cards .bold {
+  padding-bottom: 5px;
+  font-size: 18px;
+}
+.orange {
+  background-color: #ffd580;
+  border-radius: 10px;
+  padding: 2px;
+}
+.green {
+  background-color: #d1f3af;
+  border-radius: 10px;
+  padding: 2px;
+}
+.blue {
+  background-color: #add8e6;
+  border-radius: 10px;
+  padding: 2px;
 }
 
 .modal {
@@ -228,10 +264,14 @@ span {
   color: #f1356d;
 }
 
-.quiz-app {
-  max-width: 70%;
+.quiz-app,
+.communities {
+  width: calc(100% - 300px);
+  min-width: 400px;
+  background-color: transparent;
 }
 .action {
+  background-color: white;
   margin-top: 30px;
   margin-bottom: 200px;
   width: 200px;
@@ -249,6 +289,7 @@ span {
   font-size: 16px;
 }
 .option {
+  background-color: white;
   margin-top: 20px;
   width: 80%;
   /* height: 50px; */
@@ -262,7 +303,12 @@ span {
   /* color: #f2f2f2; */
   /* background-color: #f1356d; */
 }
-
+.quiz {
+  background-color: transparent;
+}
+.quiz-app {
+  background-color: transparent;
+}
 .quiz-app button:hover {
   color: #f2f2f2;
   background-color: #333;
@@ -355,4 +401,46 @@ span {
   display: flex;
   align-items: top;
   gap: 5px;
+}
+
+/* communities */
+
+.column {
+  float: left;
+  margin: 10px;
+  /* width: 25%; */
+  padding: 0 10px;
+  min-width: 300px;
+  height: 300px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  width: 30%;
+  min-height: 300px;
+  min-width: 300px;
+  transition: 0.3s;
+  background-color: #f9f4ee;
+}
+/* On mouse-over, add a deeper shadow */
+.column:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+/* Add some padding inside the card container */
+.cards {
+  display: table;
+  align-items: left;
+  background-color: transparent;
+  /* padding: 2px 16px; */
+  /* gap: 15px; */
+}
+
+.cards img {
+  margin: 10px;
+}
+/* Responsive columns - one column layout (vertical) on small screens */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
 }

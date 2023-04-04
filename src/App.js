@@ -9,6 +9,7 @@ import QuizApp from './routes/QuizApp';
 import { useState } from 'react';
 import SideModal from './components/SideModal';
 import { SideContext } from './helpers/Contexts';
+import Communities from './routes/Communities';
 
 function App() {
   const [modal, setModal] = useState(false);
@@ -33,6 +34,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/past-year-paper/" element={<QuizSelection />}></Route>
+            <Route path="/communities/" element={<Communities />}></Route>
             <Route path="/2016/" element={<QuizApp year="2016" />}></Route>
             <Route path="/2017/" element={<QuizApp year="2017" />}></Route>
             <Route path="*" element={<NotFound />}></Route>

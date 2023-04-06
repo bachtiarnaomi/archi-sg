@@ -21,13 +21,94 @@ export const Questions = {
       },
       {
         prompt:
-          "Which of the following statements with regards to URA's GFA Apportionment Rules for Common Areas in Mixed Use Development are true?",
+          "Which of the following statements with regards to URA's GFA Apportionment Rules for Common Areas in Mixed Use Development are true? \n i) Attributable space referes to a space which is exclusively used for a specific purpose. The GFA will be apportioned to the specific use. \n ii) The GFA of a common area where it is not exclusively used for a specific purpose, shall be apportioned based on the weighted average, pegged to the prescribed use quantum mix in the Masterplan. \n For White site developments with multiple proposed use, the non-attributable common areas will be apportioned based on a simple avereage of the uses in the development.",
         optionA: 'i & ii',
         optionB: 'i, iii & iv',
         optionC: 'ii, iii & iv',
         optionD: 'all of the above',
         answer: 'D',
-        explanation: 'All is true, refer to DC circular of GFA Apportionment',
+        explanation:
+          'All is true, refer to DC circular of GFA Apportionment. https://www.ura.gov.sg/Corporate/Guidelines/Circulars/dc15-07',
+      },
+      {
+        prompt:
+          'Under the Fire Code 2013, all floors in a building including the roof level shall be considered as habitable floors. The roof level can be considered as non-habitable if it is not used for any purpose other than housing M&E equipment/plants. \n \n Which of the following can be housed on a non-habitable roof? \n i) Lift motors \n ii) Photovoltaic panels \n iii) Cooling towers \n iv) Back-up generators',
+        optionA: 'i & iii',
+        optionB: 'i, ii & iii',
+        optionC: 'i, iii & iv',
+        optionD: 'all of the above',
+        answer: 'D',
+        explanation: 'All are non-habitable roof equipments',
+      },
+      {
+        prompt:
+          "Which of the following statements are true to the Workplace Safety and Health (Design for Safety) Regulations 2015? \n i) The Regulations is only applicable to all projects with contract sum of $10 million or more. \n ii) The developer is able to delegate his Developer's Duties to a DFS professional. However, the developer is still responsible for the DFS professional's performance. \n iii) The designer shall not produce designs that cannot be constructed, maintained, used or demolished in a reasonably safe manner. \n The contractor is required to inform the person who appointed him of any foreseeable design risk that the structure poses to ensure that the project is carried out without risks to safety or health of any person who may be affected by it.",
+        optionA: 'iii & iv',
+        optionB: 'ii & iii',
+        optionC: 'i, iii & iv',
+        optionD: 'all of the above',
+        answer: 'D',
+        explanation: '',
+      },
+      {
+        prompt:
+          'Which of the following is true? \n For construction work on or after 1st September 2011:',
+        optionA:
+          'No work is allowed from 10.00pm on Saturday/eve of Public Holiday to 10.00am on Sunday/Public Holiday.',
+        optionB:
+          'No work allowed from 7.00pm on Saturday/eve of Public Holiday to 7.00am on Sunday/Public Holiday.',
+        optionC:
+          'No work allowed from 10.00pm on Saturday/eve of Public Holiday to 7.00am on the following Monday/day after the Public Holiday.',
+        optionD:
+          'No work allowed from 7.00pm on Saturday/eve of Public Holiday to 10.00am on Sunday/Public Holiday.',
+        answer: 'C',
+        explanation:
+          'https://www.nea.gov.sg/our-services/pollution-control/noise-pollution/construction-noise-control \n After 10pm on Sat/eve of PH to 7am on the following Monday/day after PH',
+      },
+      {
+        prompt:
+          'A licensed housing developer shall deposit any instalments of purchase money and/or loan for the construction of a building project into the Project Account of the building project. \n A certificate from the Qualified Person in charge of the building project is required for the release of payment for which following works: \n i) Foundation works \n ii) Soil investigation \n Earth works \n iv) Cable detection works',
+        optionA: 'i & iii',
+        optionB: 'i, ii & iii',
+        optionC: 'i, iii & iv',
+        optionD: 'all of the above',
+        answer: 'B',
+        explanation:
+          'Housing Developer Act. Cable detection works not included',
+      },
+      {
+        prompt:
+          "In complying with the BCA's requirements on daylight reflectance of building facade materials, which of the following is/are deemed acceptable? \n i) The glass for the building work has a daylight reflectance not exceeding 20% \n ii) The roof, inclined at angle 10 degrees from the horizontal plane of the building has a specular reflectance not exceeding 10% \n iii) The roof, inclined at angle of more than 20 degrees from the horizontal plane of the building has a daylight reflectance not exceeding 20% and a specular reflectance not exceeding 10% \n iv) Emulsion paint on a plastered or concrete surfaces which has a specular reflectance not exceeding 10%",
+        optionA: 'i, ii & iv',
+        optionB: 'i, ii & iii',
+        optionC: 'i, iii & iv',
+        optionD: 'all of the above',
+        answer: 'D',
+        explanation: 'BCA Approved Solution P.3. \n All are true.',
+      },
+      {
+        prompt:
+          "Which of the statements with regard to SCDF's requirements for persons with disabilities (PWD) in an A&A work is true?",
+        optionA:
+          'A PWD Holding point shall be provided for an A&A works affecting the common corridor of a building under a single ownership in a non-strata title building.',
+        optionB:
+          "Industrial buildings that are exempted from barrier-free accessibility compliance under the BCA's Code of Accessibility in the Built Environment will still need to comply to PWD requirements.",
+        optionC:
+          'Where an alteration work to a building affects smoke stop lobby, a PWD Holding Point and Distress communication means shall be incorporated to the affected floor.',
+        optionD:
+          'The provision of visual alarm system is not applicable to health care buildings that are exempted from PWD requirements.',
+        answer: 'C',
+        explanation: '',
+      },
+      {
+        prompt:
+          'Under the Housing Developers (Control and Licensing) Act, which of the followings is/are true? \n On completion of a title survey, if the deficiency is more than 3% of the area stated in the Agreement, the Purchasing Price shall be reduced. \n ii) On completion of a title survey, if the area of the Property is more than the area stated in the Agreement, the Purchasing Price shall be adjusted. \n iii) The Purchaser shall pay for the changes to Specifications or approved plans if such changes are required by the Commissioner of Building Control or other relevant authorities. \n iv) For any changes involving the substitution or use of cheaper materials or an omission of works as originally stated in the Specifications or approved plans, the Purchaser shall be entitled to a corresponding reduction in Purchasing Price.',
+        optionA: 'i & iv',
+        optionB: 'i, ii & iii',
+        optionC: 'i, ii & iv',
+        optionD: 'all of the above',
+        answer: '',
+        explanation: '',
       },
       //OPEN ENDED QUESTIONS AFTER
       // {
@@ -163,6 +244,224 @@ export const Questions = {
         answer: 'C',
         explanation:
           'BCA Accessibility Code \n i) not true \n ii) true, Cl 4.4.6.1 p60 \n iii) true, Cl 4.4.6.1 ,p 60 \n iv) not true',
+      },
+    ],
+  },
+  2018: {
+    mcq: [
+      {
+        prompt:
+          'Under the Buildable Design Appraisal System, to earn 10 points for prefabricated prefinished volumetric construction (PPVC) adoption, what is the minimum percentage of coverage required?',
+        optionA: '70%',
+        optionB: '75%',
+        optionC: '80%',
+        optionD: '85%',
+        answer: 'C',
+        explanation: '',
+      },
+      {
+        prompt:
+          'Under the Housing Developers (Show Unit) Rules 2015, which of the following does the licensed housing developer need to state on the drawn-to-scale floor plan:',
+        optionA: 'The address of the depicted unit',
+        optionB:
+          'The reference number of the approved building plan for the depicted unit',
+        optionC: 'The date of approved building plan for the depicted unit',
+        optionD: 'All of the above',
+        answer: 'D',
+        explanation: '',
+      },
+      {
+        prompt:
+          'Under WSH (Design for Safety) Regulation, what is the minimum project value where the ACT is applicable?',
+        optionA: 'Projects with contract value of $5 million',
+        optionB: 'Projects with contract value of $10 million',
+        optionC: 'Projects with contract value of $15 million',
+        optionD: 'Projects with contract value of $20 million',
+        answer: 'B',
+        explanation: '',
+      },
+      {
+        prompt: 'The PUB Active Beautiful Waters programme seeks to',
+        optionA: 'Facilitate high-rise greenery in sky terraces',
+        optionB: 'Act as a permanent water storage system',
+        optionC:
+          'Manage peak stormwater runoff discharging to the public network of waterways',
+        optionD:
+          'Enhance developments sited only along coastal developments by providing public amenities and landscaping features',
+        answer: 'C',
+        explanation: '',
+      },
+      {
+        prompt:
+          'In accordance to SS485:2011 (specification for slip resistance classification of pedestrian surface materials) the minimum ramp recommendation for external walkway is',
+        optionA: 'R9',
+        optionB: 'R10',
+        optionC: 'R11',
+        optionD: 'R12',
+        answer: 'C',
+        explanation: '',
+      },
+      {
+        prompt:
+          'Which of the following works would not be covered under the Security of Payment Act?',
+        optionA:
+          'Provision of architectural services to a commercial project in Singapore which does not require Building Plan submission',
+        optionB:
+          'Home renovation work for a HDB flat which does not require Building Plan submission',
+        optionC:
+          'Locally prefabricated components for a building project in Singapore',
+        optionD:
+          'Home renovation work for landed houses that require Building Plan submission',
+        answer: 'B',
+        explanation: '',
+      },
+      {
+        prompt:
+          'Under the Architects Act, which of the following is considered illegal practice?',
+        optionA:
+          'A non-architect preparing architectural plans under the direction or supervision of a registered architect',
+        optionB:
+          'A registered architect endorsing drawings produced by interior designer and intended for statutory submission',
+        optionC:
+          'A builder offering to supply architectural services, together with a registered architect, in connection with building works undertaken by him',
+        optionD:
+          'An allied professional offering to supply architectural services in Singapore, in a licensed limited liability partnership',
+        answer: 'B',
+        explanation: '',
+      },
+      {
+        prompt:
+          'Which of the following is true when designing for roof drainage?',
+        optionA:
+          'Categories of design risk are proposed based on rainfall records',
+        optionB:
+          'Allowance for the driving effect of wind must always be considered',
+        optionC:
+          'Calculations are not required when using a siphonic roof drainage system',
+        optionD:
+          'When calculating effective catchment area, the rainfall angle to the vertical is not taken into consideration',
+        answer: 'A',
+        explanation: '',
+      },
+      {
+        prompt:
+          'As part of the LTA/URA latest bicycle parking standards to cater for the potential spill over of bicycle parking demand from major destination locations, higher bicycle parking provision is required for which of the following:',
+        optionA: '500m from MRT station',
+        optionB: 'Educational Institutions',
+        optionC: 'Restricted Zone and Marina Bay',
+        optionD: 'All of the above',
+        answer: 'C',
+        explanation: '',
+      },
+      {
+        prompt:
+          'In compliance with the use of claddings on external wall of buildings, which of the following is true?',
+        optionA:
+          'QP to check Composite panel must be tested to the standards in BS 476 Part 4, BS 476 Part 11, BS 476 Part 7 & BS 476 Part 6 of EN 13501-1',
+        optionB:
+          'External wall for mounting of composite panels shall have a fire resistance rating of at least 0.5 hour',
+        optionC:
+          'Cladding situated less than 1m from any point on the relevant boundary shall comply with Class "1" surface spread of flame',
+        optionD: 'All of the above',
+        answer: 'A',
+        explanation: '',
+      },
+    ],
+  },
+  2019: {
+    mcq: [
+      {
+        prompt:
+          'The Minimum Platform Level required by PUB depends on all of the followings. \n Which one is false?',
+        optionA: 'Locality of the site.',
+        optionB: 'Type of the development.',
+        optionC: 'Adjacent road / Adjacent site level',
+        optionD: 'Highest recorded rainfall of the site',
+        answer: 'D',
+        explanation:
+          'https://www.pub.gov.sg/Documents/COP_Final.pdf \n Refer to PUB COP of surface water drainage. Cl 2.1.1 and line before, only option D not mentioned.',
+      },
+      {
+        prompt: '',
+        optionA: '',
+        optionB: '',
+        optionC: '',
+        optionD: '',
+        answer: 'B',
+        explanation:
+          'Refer to WSH lecture slide Pg 8. It is an outcome-based regime',
+      },
+      {
+        prompt: '',
+        optionA: '',
+        optionB: '',
+        optionC: '',
+        optionD: '',
+        answer: '',
+        explanation: '',
+      },
+      {
+        prompt: '',
+        optionA: '',
+        optionB: '',
+        optionC: '',
+        optionD: '',
+        answer: '',
+        explanation: '',
+      },
+      {
+        prompt: '',
+        optionA: '',
+        optionB: '',
+        optionC: '',
+        optionD: '',
+        answer: '',
+        explanation: '',
+      },
+      {
+        prompt: '',
+        optionA: '',
+        optionB: '',
+        optionC: '',
+        optionD: '',
+        answer: '',
+        explanation: '',
+      },
+      {
+        prompt: '',
+        optionA: '',
+        optionB: '',
+        optionC: '',
+        optionD: '',
+        answer: '',
+        explanation: '',
+      },
+      {
+        prompt: '',
+        optionA: '',
+        optionB: '',
+        optionC: '',
+        optionD: '',
+        answer: '',
+        explanation: '',
+      },
+      {
+        prompt: '',
+        optionA: '',
+        optionB: '',
+        optionC: '',
+        optionD: '',
+        answer: '',
+        explanation: '',
+      },
+      {
+        prompt: '',
+        optionA: '',
+        optionB: '',
+        optionC: '',
+        optionD: '',
+        answer: '',
+        explanation: '',
       },
     ],
   },

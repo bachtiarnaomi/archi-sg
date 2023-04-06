@@ -3,8 +3,8 @@ function Communities() {
     <div className="communities">
       <h1>Communities</h1>
       <h3>
-        Find others on the same journey as you. Check out other resource
-        compilations.
+        Find others on the same journey as you. Join a group or check out other
+        resource compilations.
       </h3>
       <div className="cards">
         <a className="column" href="https://t.me/siayalgroup" target="_blank">

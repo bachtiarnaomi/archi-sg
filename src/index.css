@@ -44,12 +44,43 @@ img {
   margin: 0;
   padding: 0;
 }
+.home,
+.about {
+  margin-top: 100px;
+  background-color: transparent;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: auto;
+  /* height: 100%; */
+  overflow: auto;
+}
+
+.about {
+  background-image: url('housing-section.png');
+}
+.about-container {
+  /* width: 500px; */
+  background: rgba(211, 199, 183, 0.6);
+  /* height: 250px; */
+  margin: 50px;
+  margin-top: 10%;
+  outline: solid 1px black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.about p,
+.about h3,
+.about h1 {
+  background: transparent; /* d3c7b7 */
+  width: 100%;
+  /* background-color: transparent; */
+}
+
 .home {
   /* margin-left: 250px; */
-  padding-left: 20px;
-  padding-top: 5%;
-  padding-bottom: 5%;
-  width: 80%;
+  padding: 20px;
+  /* width: 80%; */
   min-width: 400px;
   max-width: 1000px;
   /* position: absolute; */
@@ -57,28 +88,28 @@ img {
   text-align: center;
   align-items: center;
 }
-.home h3 {
-  font-size: 24px;
-  background-color: #a2c2c4;
-}
+.home h3,
 .communities h3 {
   font-size: 24px;
   background-color: #a2c2c4;
+  margin-bottom: 20px;
 }
-
 .home p {
   width: 100%;
   font-size: 18px;
 }
 .navbar {
   padding: 10px;
+  top: 0;
   display: flex;
   align-items: center;
+  width: 100%;
   max-width: 100%;
   margin: 0;
   max-height: 100px;
   border-bottom: 1px solid #f2f2f2;
   z-index: 999;
+  position: fixed;
 }
 .navbar h1 {
   color: #f1356d;
@@ -118,20 +149,19 @@ img {
 .sidebar {
   width: 50px;
   background-color: #f9f4ee;
-  display: flex;
+  display: absolute;
   transition: 350ms;
 }
 .sidebar.active {
   width: 250px;
   background-color: #f9f4ee;
-  display: flex;
+  display: absolute;
   transition: 350ms;
 }
 
 .menu-bars {
-  margin-left: 16px;
-  font-size: 2rem;
-  background: none;
+  display: flex;
+  font-size: 1.8rem;
 }
 
 .nav-menu {
@@ -266,8 +296,12 @@ img {
 
 .quiz-app,
 .communities {
-  width: calc(100% - 300px);
+  margin-top: 100px;
+  /* width: calc(100% - 300px); */
+  padding-left: 20px;
+  padding-right: 20px;
   min-width: 400px;
+  height: auto;
   background-color: transparent;
 }
 .action {
@@ -284,6 +318,11 @@ img {
   cursor: pointer;
   padding: 10px;
   box-shadow: 5px 5px #d3c7b7;
+}
+
+.action:hover {
+  color: #f2f2f2;
+  background-color: #333;
 }
 .prompt {
   font-size: 16px;
@@ -419,6 +458,16 @@ img {
   transition: 0.3s;
   background-color: #f9f4ee;
 }
+
+.card-small {
+  float: left;
+  margin: 10px;
+  padding: 0 10px;
+  min-width: 100px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  background-color: #f9f4ee;
+}
 /* On mouse-over, add a deeper shadow */
 .column:hover {
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
@@ -436,6 +485,20 @@ img {
 .cards img {
   margin: 10px;
 }
+
+/* BOA Log Sheet */
+.link {
+  text-decoration: underline;
+}
+
+.link:hover {
+  color: #f1356d;
+}
+
+.not-found {
+  margin-top: 100px;
+}
+
 /* Responsive columns - one column layout (vertical) on small screens */
 @media screen and (max-width: 600px) {
   .column {

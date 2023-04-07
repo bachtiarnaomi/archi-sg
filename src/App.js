@@ -12,6 +12,7 @@ import { SideContext } from './helpers/Contexts';
 import Communities from './routes/Communities';
 import Logsheet from './routes/Logsheet';
 import About from './routes/About';
+import Contact from './routes/Contact';
 
 function App() {
   const [modal, setModal] = useState(false);
@@ -45,6 +46,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about/" element={<About />}></Route>
+            <Route path="/contact/" element={<Contact />}></Route>
             <Route path="/past-year-paper/" element={<QuizSelection />}></Route>
             <Route path="/communities/" element={<Communities />}></Route>
             <Route path="/logsheet/" element={<Logsheet />}></Route>

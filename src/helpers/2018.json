@@ -1,0 +1,92 @@
+[
+  {
+    "prompt": "Under the Buildable Design Appraisal System, to earn 10 points for prefabricated prefinished volumetric construction (PPVC) adoption, what is the minimum percentage of coverage required?",
+    "optionA": "70%",
+    "optionB": "75%",
+    "optionC": "80%",
+    "optionD": "85%",
+    "answer": "C",
+    "explanation": ""
+  },
+  {
+    "prompt": "Under the Housing Developers (Show Unit) Rules 2015, which of the following does the licensed housing developer need to state on the drawn-to-scale floor plan:",
+    "optionA": "The address of the depicted unit",
+    "optionB": "The reference number of the approved building plan for the depicted unit",
+    "optionC": "The date of approved building plan for the depicted unit",
+    "optionD": "All of the above",
+    "answer": "D",
+    "explanation": ""
+  },
+  {
+    "prompt": "Under WSH (Design for Safety) Regulation, what is the minimum project value where the ACT is applicable?",
+    "optionA": "Projects with contract value of $5 million",
+    "optionB": "Projects with contract value of $10 million",
+    "optionC": "Projects with contract value of $15 million",
+    "optionD": "Projects with contract value of $20 million",
+    "answer": "B",
+    "explanation": ""
+  },
+  {
+    "prompt": "The PUB Active Beautiful Waters programme seeks to",
+    "optionA": "Facilitate high-rise greenery in sky terraces",
+    "optionB": "Act as a permanent water storage system",
+    "optionC": "Manage peak stormwater runoff discharging to the public network of waterways",
+    "optionD": "Enhance developments sited only along coastal developments by providing public amenities and landscaping features",
+    "answer": "C",
+    "explanation": ""
+  },
+  {
+    "prompt": "In accordance to SS485:2011 (specification for slip resistance classification of pedestrian surface materials) the minimum ramp recommendation for external walkway is",
+    "optionA": "R9",
+    "optionB": "R10",
+    "optionC": "R11",
+    "optionD": "R12",
+    "answer": "C",
+    "explanation": ""
+  },
+  {
+    "prompt": "Which of the following works would not be covered under the Security of Payment Act?",
+    "optionA": "Provision of architectural services to a commercial project in Singapore which does not require Building Plan submission",
+    "optionB": "Home renovation work for a HDB flat which does not require Building Plan submission",
+    "optionC": "Locally prefabricated components for a building project in Singapore",
+    "optionD": "Home renovation work for landed houses that require Building Plan submission",
+    "answer": "B",
+    "explanation": ""
+  },
+  {
+    "prompt": "Under the Architects Act, which of the following is considered illegal practice?",
+    "optionA": "A non-architect preparing architectural plans under the direction or supervision of a registered architect",
+    "optionB": "A registered architect endorsing drawings produced by interior designer and intended for statutory submission",
+    "optionC": "A builder offering to supply architectural services, together with a registered architect, in connection with building works undertaken by him",
+    "optionD": "An allied professional offering to supply architectural services in Singapore, in a licensed limited liability partnership",
+    "answer": "B",
+    "explanation": ""
+  },
+  {
+    "prompt": "Which of the following is true when designing for roof drainage?",
+    "optionA": "Categories of design risk are proposed based on rainfall records",
+    "optionB": "Allowance for the driving effect of wind must always be considered",
+    "optionC": "Calculations are not required when using a siphonic roof drainage system",
+    "optionD": "When calculating effective catchment area, the rainfall angle to the vertical is not taken into consideration",
+    "answer": "A",
+    "explanation": ""
+  },
+  {
+    "prompt": "As part of the LTA/URA latest bicycle parking standards to cater for the potential spill over of bicycle parking demand from major destination locations, higher bicycle parking provision is required for which of the following:",
+    "optionA": "500m from MRT station",
+    "optionB": "Educational Institutions",
+    "optionC": "Restricted Zone and Marina Bay",
+    "optionD": "All of the above",
+    "answer": "C",
+    "explanation": ""
+  },
+  {
+    "prompt": "In compliance with the use of claddings on external wall of buildings, which of the following is true?",
+    "optionA": "QP to check Composite panel must be tested to the standards in BS 476 Part 4, BS 476 Part 11, BS 476 Part 7 & BS 476 Part 6 of EN 13501-1",
+    "optionB": "External wall for mounting of composite panels shall have a fire resistance rating of at least 0.5 hour",
+    "optionC": "Cladding situated less than 1m from any point on the relevant boundary shall comply with Class \"1\" surface spread of flame",
+    "optionD": "All of the above",
+    "answer": "A",
+    "explanation": ""
+  }
+]

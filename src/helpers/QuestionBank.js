@@ -382,86 +382,114 @@ export const Questions = {
           'https://www.pub.gov.sg/Documents/COP_Final.pdf \n Refer to PUB COP of surface water drainage. Cl 2.1.1 and line before, only option D not mentioned.',
       },
       {
-        prompt: '',
-        optionA: '',
-        optionB: '',
-        optionC: '',
-        optionD: '',
+        prompt:
+          'Which of the following covered in Workplace Safety and Health Act (Design for Safety) Regulations is true?',
+        optionA:
+          'An up-to-date design for safety register that needs to be kept by the architect.',
+        optionB:
+          'It focuses on workplace safety and health systems and cutcomes, rather than merely on compliance.',
+        optionC:
+          'WSH approval is needed for modification of a temporary structure with a contract calue of at least $5 million.',
+        optionD:
+          'Design plan for WSH should include drawings, design details, specifications, materials and bills of quantities (including specifications of articles or substances) relating to a structure, and calculations prepared for the purpose of a design, excluding building information modelling.',
         answer: 'B',
         explanation:
           'Refer to WSH lecture slide Pg 8. It is an outcome-based regime',
       },
       {
-        prompt: '',
-        optionA: '',
-        optionB: '',
-        optionC: '',
-        optionD: '',
+        prompt: 'Which of the following covered in NParks Handbook is true?',
+        optionA:
+          'Combined length of the allowable structures must not exceed 3.0m or 25% of the length of the green buffer (excludes ingress/egress) or peripheral planting verge along that side, whichever is greater.',
+        optionB: 'An arborist report is required when trees are removed.',
+        optionC:
+          'Tree Impact Assessment is an evaluation of the adverse impacts of construction activities on tree health and stability.',
+        optionD:
+          'Green buffers should generally be flat to the ratio of 1:40. If site situation does not permit, the proposed slope should not be steeper than the ratio of 1:2.',
+        answer: 'C',
+        explanation:
+          'https://www.nparks.gov.sg/partner-us/development-plan-submission/guidelines-on-greenery-provision-and-tree-conservation-for-developments \n Nparks Guidelines on Greenery Provision and Tree Conservation for Developments \n Tree Impact Assessment.',
+      },
+      {
+        prompt:
+          'Under the Housing Developers (Show Unit) Rules, which of these rules is false?',
+        optionA:
+          'Names of streets, prominent buildings, facilities and other features within a radius of 1km of the project must be clearly marked and legible.',
+        optionB:
+          'The site plan must be based on the approved building plan(s) with the building plan approval date(s) and number(s) stated clearly.',
+        optionC:
+          'The show unit floor-to-ceiling height must be the same as that shown in the approved plan for the depicted unit.',
+        optionD: 'All door frames must be installed in the show unit.',
+        answer: 'A',
+        explanation:
+          'https://www.ura.gov.sg/Corporate/Guidelines/Developers/-/media/BA6217C14FF143EDAA1B533E44081192.ashx \n https://sso.agc.gov.sg/SL/HDCLA1965-S289-2015',
+      },
+      {
+        prompt:
+          'The construction of a loft within a condominium unit that is similar to a furniture deck can be exempted from planning permission if it meets the following criteria, except:',
+        optionA: 'The total area is not more than 5sqm.',
+        optionB:
+          'It is a lightweight furniture fixture that does not form part of the structural element of the building.',
+        optionC: 'There is only one such loft per unit.',
+        optionD:
+          'The headroom of the loft area is higher than the headroom below the loft.',
         answer: '',
         explanation: '',
       },
       {
-        prompt: '',
-        optionA: '',
-        optionB: '',
-        optionC: '',
-        optionD: '',
+        prompt:
+          'In accordance to SS555:2018 (Code of Practice for Protection against Lightning), Lightning Protection System (LPS) As-built plan accompanying any TOP/CSC application shall be prepared by Professional Engineer. Which of the following should be included in the LPS As-built plan? \n \n i) Additional measures for habitable rooftop spaces (e.g. roof gardens, penthouse terraces). \n ii) LPS warning signs. \n iii) Protection of corners and edges of flat roofs and parapet walls of tall buildings. \n iv) Protection in open spaces.',
+        optionA: 'i & iii',
+        optionB: 'ii & iv',
+        optionC: 'i, ii & iii',
+        optionD: 'All of the above.',
         answer: '',
         explanation: '',
       },
       {
-        prompt: '',
-        optionA: '',
-        optionB: '',
-        optionC: '',
-        optionD: '',
-        answer: '',
-        explanation: '',
+        prompt:
+          "Under URA's Balcony Incentive Scheme revised guidelines, the bonus GFA for Private Outdoor Spaces in residentioal developments will be capped at?",
+        optionA: '5%',
+        optionB: '6%',
+        optionC: '7%',
+        optionD: '8%',
+        answer: 'C',
+        explanation:
+          'URA \n https://www.ura.gov.sg/Corporate/Guidelines/Development-Control/Residential/Flats-Condominiums/Balconies-PES-PRT',
       },
       {
-        prompt: '',
-        optionA: '',
-        optionB: '',
-        optionC: '',
-        optionD: '',
-        answer: '',
-        explanation: '',
+        prompt:
+          'Which of the following existing development(s) is/are eligible for the Surplus Car Park Conversion scheme?',
+        optionA:
+          'Commercial, Mixed Use and Hotel developments within the Central Area.',
+        optionB:
+          'Commercial, Mixed Use and Hotel developments within 400m of an MRT/LRT station.',
+        optionC: 'Residential developments within the Central Area.',
+        optionD: 'All of the above.',
+        answer: 'D',
+        explanation:
+          'Code of Practice on Vehicle Parking Provision in Development Proposals - 2019 Edition. Section 5.3. \n https://www.corenet.gov.sg/media/2268535/cop-on-vehicle-parking-provision-in-development-proposals-2019-edition.pdf',
       },
       {
-        prompt: '',
-        optionA: '',
-        optionB: '',
-        optionC: '',
-        optionD: '',
-        answer: '',
-        explanation: '',
+        prompt:
+          'Which of the following is true when ensuring smoke-free approach to an exit staircase serving an 8-storey building? \n \n i) Entry to exit staircase must only be through a smoke-stop lobby. \n ii) The smoke-stop lobby can be at least 3sqm and with minimum clear width of 1.2m if it does not serve floors where patients may need to be evacuated on stretchers. \n iii) Smoke-stop lobby is not required of the building is a multi-storey carpark. \n iv) Smoke-stop lobby cannot serve as fire lift lobby.',
+        optionA: 'ii only',
+        optionB: 'iv only',
+        optionC: 'ii & iii',
+        optionD: 'i, ii, & iii',
+        answer: 'D',
+        explanation:
+          'Clause 2.2.13 Smoke-free approach to exit staircase. \n https://www.scdf.gov.sg/firecode/table-of-content/chapter-2-means-of-escape/clause-2.2',
       },
       {
-        prompt: '',
-        optionA: '',
-        optionB: '',
-        optionC: '',
-        optionD: '',
-        answer: '',
-        explanation: '',
-      },
-      {
-        prompt: '',
-        optionA: '',
-        optionB: '',
-        optionC: '',
-        optionD: '',
-        answer: '',
-        explanation: '',
-      },
-      {
-        prompt: '',
-        optionA: '',
-        optionB: '',
-        optionC: '',
-        optionD: '',
-        answer: '',
-        explanation: '',
+        prompt:
+          'Which of the following developments are exempted from obtaining vehicle parking clearance from LTA? \n \n i) Holiday chalets in Pulau Ubin. \n ii) Boutique Hotel in conserved shophouse in a historic conservation area. \n iii) Data Centre in Changi Business Park. \n iv) Development of land for the purpose of farming.',
+        optionA: 'i & ii',
+        optionB: 'i & iv',
+        optionC: 'i, ii & iv',
+        optionD: 'All of the above.',
+        answer: 'C',
+        explanation:
+          'Code of Practice for Vehichle Parking Provision in Development Proposals - 2019. Appendix D. \n https://www.corenet.gov.sg/media/2268535/cop-on-vehicle-parking-provision-in-development-proposals-2019-edition.pdf',
       },
     ],
   },

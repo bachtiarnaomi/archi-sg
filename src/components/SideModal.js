@@ -6,7 +6,7 @@ import { SideModalData } from './SideModalData';
 import { SideContext } from '../helpers/Contexts';
 
 const SideModal = () => {
-  const { modal, sidebar } = useContext(SideContext);
+  const { modal, sidebar, setModal } = useContext(SideContext);
   return (
     <div
       className={modal ? 'dropdown-menu active' : 'dropdown-menu'}
@@ -16,6 +16,15 @@ const SideModal = () => {
       }}
     >
       <div className="modal">
+        <div className="close-button">
+          <Link to="#">
+            <FaIcons.FaTimes
+              onClick={() => {
+                setModal(false);
+              }}
+            />
+          </Link>
+        </div>
         {SideModalData.map((item, index) => {
           return (
             <div className="modal-section">

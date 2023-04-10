@@ -20,6 +20,7 @@ router.route('/add').post((req, res) => {
 
 // find by property
 router.route('/get-by-year/:year').get((req, res) => {
+  console.log('get by year', req.params.year);
   Quiz.find({ year: req.params.year })
     .then((quiz) => {
       res.json(quiz);

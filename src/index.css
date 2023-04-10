@@ -279,7 +279,10 @@ img {
   border-radius: 10px;
   padding: 2px;
 }
-
+.close-button {
+  font-size: 30px;
+  background-color: transparent;
+}
 .modal {
   background-color: #d3c7b7;
   display: flex;

@@ -11,7 +11,9 @@ function Quiz({ year }) {
   const { questions, setQuestions } = useContext(QuizContext);
   const { answers, setAnswers } = useContext(QuizContext);
   useEffect(() => {
-    axios.get(`http://localhost:3003/quiz/?year=${year}`).then((res) => {
+    console.log('get quiz', year);
+    axios.get(`http://localhost:3003/quiz/get-by-year/${year}`).then((res) => {
+      console.log('res', res);
       setQuestions(res.data[0].mcq);
     });
   }, []);

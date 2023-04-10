@@ -18,9 +18,20 @@ router.route('/add').post((req, res) => {
     .catch((err) => res.status(400).json('Error: ' + err));
 });
 
-router.route('/:year/:value').get((req, res) => {
-  Quiz.find({ [req.params.key]: [req.params.value] })
-    .then((quiz) => res.json(quiz))
+// find by property
+router.route('/get-by-year/:year').get((req, res) => {
+  Quiz.find({ year: req.params.year })
+    .then((quiz) => {
+      res.json(quiz);
+    })
+    .catch((err) => res.status(400).json('Error ' + err));
+});
+
+// get one goal
+router.route('/:id').get((req, res) => {
+  console.log('find by id');
+  Quiz.findById(req.params.id)
+    .then((goal) => res.json(goal))
     .catch((err) => res.status(400).json('Error: ' + err));
 });
 

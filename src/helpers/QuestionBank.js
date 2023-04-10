@@ -107,15 +107,9 @@ export const Questions = {
         optionB: 'i, ii & iii',
         optionC: 'i, ii & iv',
         optionD: 'all of the above',
-        answer: '',
+        answer: 'A',
         explanation: '',
       },
-      //OPEN ENDED QUESTIONS AFTER
-      // {
-      //   prompt: 'What did you do today?',
-      //   isMCQ: false,
-      //   answer: 'This is open ended. There is no right or wrong answer.',
-      // },
     ],
     open: [],
   },
@@ -421,7 +415,7 @@ export const Questions = {
         optionD: 'All door frames must be installed in the show unit.',
         answer: 'A',
         explanation:
-          'https://www.ura.gov.sg/Corporate/Guidelines/Developers/-/media/BA6217C14FF143EDAA1B533E44081192.ashx \n https://sso.agc.gov.sg/SL/HDCLA1965-S289-2015',
+          'A - should be 500m radius. \n https://www.ura.gov.sg/Corporate/Guidelines/Developers/-/media/BA6217C14FF143EDAA1B533E44081192.ashx \n https://sso.agc.gov.sg/SL/HDCLA1965-S289-2015',
       },
       {
         prompt:
@@ -432,8 +426,9 @@ export const Questions = {
         optionC: 'There is only one such loft per unit.',
         optionD:
           'The headroom of the loft area is higher than the headroom below the loft.',
-        answer: '',
-        explanation: '',
+        answer: 'D',
+        explanation:
+          'Headroom of the loft area is higher than the headroom below the loft.',
       },
       {
         prompt:
@@ -442,7 +437,7 @@ export const Questions = {
         optionB: 'ii & iv',
         optionC: 'i, ii & iii',
         optionD: 'All of the above.',
-        answer: '',
+        answer: 'C',
         explanation: '',
       },
       {

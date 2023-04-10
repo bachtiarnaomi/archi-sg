@@ -6,17 +6,22 @@ import NotFound from './components/NotFound';
 import QuizSelection from './routes/QuizSelection';
 import Home from './routes/Home';
 import QuizApp from './routes/QuizApp';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import SideModal from './components/SideModal';
 import { SideContext } from './helpers/Contexts';
 import Communities from './routes/Communities';
 import Logsheet from './routes/Logsheet';
 import About from './routes/About';
 import Contact from './routes/Contact';
+import $ from 'jquery';
 
 function App() {
   const [modal, setModal] = useState(false);
-  const [sidebar, setSidebar] = useState(true);
+  const [sidebar, setSidebar] = useState(() => {
+    if ($(window).width() < 768) return false;
+    return true;
+  });
+
   return (
     <Router>
       <div className="App">
@@ -52,6 +57,8 @@ function App() {
             <Route path="/logsheet/" element={<Logsheet />}></Route>
             <Route path="/2016/" element={<QuizApp year="2016" />}></Route>
             <Route path="/2017/" element={<QuizApp year="2017" />}></Route>
+            <Route path="/2018/" element={<QuizApp year="2018" />}></Route>
+            <Route path="/2019/" element={<QuizApp year="2019" />}></Route>
             <Route path="*" element={<NotFound />}></Route>
           </Routes>
         </div>

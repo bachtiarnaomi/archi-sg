@@ -1,16 +1,16 @@
 import { useContext } from 'react';
 import { QuizContext } from '../helpers/Contexts';
-import { Questions } from '../helpers/QuestionBank';
+// import { Questions } from '../helpers/QuestionBank';
 import QuizReview from './QuizReview';
 function QuizEnd({ year }) {
-  const { score, setScore } = useContext(QuizContext);
-  const { game, setGameState } = useContext(QuizContext);
+  const { score, setScore, game, setGameState, questions } =
+    useContext(QuizContext);
   // need tto switch game state to review when button is pressed
   return (
     <div className="quiz">
       <h1>{year} Quiz</h1>
       <h3>
-        Score: {score} /{Questions[year]['mcq'].length}
+        Score: {score} /{questions.length}
       </h3>
       <QuizReview></QuizReview>
       <p>

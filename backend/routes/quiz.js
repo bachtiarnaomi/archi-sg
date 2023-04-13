@@ -4,7 +4,10 @@ let Quiz = require('../models/quiz.model.js');
 router.route('/').get((req, res) => {
   Quiz.find()
     .then((quizes) => res.json(quizes))
-    .catch((err) => res.status(400).json('Error: ' + err));
+    .catch((err) => {
+      console.log('err', err);
+      res.status(400).json('Error: ' + err);
+    });
 });
 
 router.route('/add').post((req, res) => {
@@ -25,7 +28,10 @@ router.route('/get-by-year/:year').get((req, res) => {
     .then((quiz) => {
       res.json(quiz);
     })
-    .catch((err) => res.status(400).json('Error ' + err));
+    .catch((err) => {
+      console.log('err', err);
+      res.status(400).json('Error ' + err);
+    });
 });
 
 // get one goal

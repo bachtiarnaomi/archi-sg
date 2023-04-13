@@ -12,7 +12,7 @@ function Quiz({ year }) {
   const { answers, setAnswers } = useContext(QuizContext);
   useEffect(() => {
     console.log('get quiz', year);
-    axios.get(`http://127.0.0.1:3003/quiz/get-by-year/${year}`).then((res) => {
+    axios.get(`http://13.251.27.235/quiz/get-by-year/${year}`).then((res) => {
       console.log('res', res);
       setQuestions(res.data[0].mcq);
     });

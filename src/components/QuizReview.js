@@ -6,9 +6,10 @@ function QuizReview({ year }) {
     useContext(QuizContext);
   return (
     <div className="quiz">
-      <h1>{year} PPE</h1>
-      <p>This is the {year} PPE paper.</p>
+      <br />
       <p>Below is a review of the paper.</p>
+      <br />
+
       {questions.map((question, index) => {
         return (
           <div

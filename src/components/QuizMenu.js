@@ -10,7 +10,14 @@ function QuizMenu({ year }) {
       <p>This is the {year} PPE paper.</p>
       <p>
         Answers for the paper has been sourced from the community. If you see
-        any discrepancies, you can use the feedback form <a href="/">here.</a>
+        any discrepancies, you can use the feedback form{' '}
+        <a
+          style={{ textDecoration: 'underline' }}
+          href="/contact"
+          target="_blank"
+        >
+          here.
+        </a>
       </p>
       <button
         className="action"

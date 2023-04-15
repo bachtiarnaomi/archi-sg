@@ -8,13 +8,9 @@ function About() {
         convenient location. The website is envisioned to be the home page for
         individuals who are on their journey to becoming a Qualified
         Practitioner (QP). <br /> <br />
-        The website has been developed independently by{' '}
-        <a className="link" href="https://www.naomibachtiar.com">
-          Naomi Bachtiar
-        </a>
-        . It has no affiliations to any official organisations. That being said,
-        it leverages on existing resources that various groups have organised. A
-        list of contributors to the content of this website can be found below.{' '}
+        This website has been developed independently. It has no affiliations to
+        any official organisations. That being said, it leverages on existing
+        resources that various groups have organised.
         <br />
         <br />
         <h3>
@@ -26,7 +22,7 @@ function About() {
         </h3>
       </p>
       <h3></h3>
-      <div className="about-container">
+      {/* <div className="about-container">
         <h3>Contributors</h3>
         <div className="table">
           <div className="about-column">
@@ -62,7 +58,7 @@ function About() {
             <p>Yer Jia Ling</p>
           </div>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 }

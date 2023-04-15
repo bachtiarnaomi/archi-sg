@@ -10,14 +10,14 @@ function QuizEnd({ year }) {
     <div className="quiz">
       <h1>{year} Quiz</h1>
       <h3>
-        Score: {score} /{questions.length}
+        Score: {score}/{questions.length}
       </h3>
       <QuizReview></QuizReview>
-      <p>
+      {/* <p>
         The next segment is open ended. Suggested answers from the community
         will be displayed alongside the question.
       </p>
-      <button className="action">Next Segment</button>
+      <button className="action">Next Segment</button> */}
     </div>
   );
 }

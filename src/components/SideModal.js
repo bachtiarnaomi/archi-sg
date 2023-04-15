@@ -12,19 +12,19 @@ const SideModal = () => {
       className={modal ? 'dropdown-menu active' : 'dropdown-menu'}
       style={{
         marginLeft: sidebar ? ' 250px' : ' 65px',
-        width: sidebar ? ' calc(100% - 265px)' : ' calc(100% - 80px)',
+        width: sidebar ? ' calc(100% - 305px)' : ' calc(100% - 120px)',
       }}
     >
+      <div className="close-button">
+        <Link to="#">
+          <FaIcons.FaTimes
+            onClick={() => {
+              setModal(false);
+            }}
+          />
+        </Link>
+      </div>
       <div className="modal">
-        <div className="close-button">
-          <Link to="#">
-            <FaIcons.FaTimes
-              onClick={() => {
-                setModal(false);
-              }}
-            />
-          </Link>
-        </div>
         {SideModalData.map((item, index) => {
           return (
             <div className="modal-section">

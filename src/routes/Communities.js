@@ -16,7 +16,7 @@ function Communities() {
             discussion.
           </p>
         </a>{' '}
-        <a className="column" href="https://asdac.super.site/" target="_blank">
+        <a className="column">
           <img src="images/asdac.jpg" alt=""></img>
           <p className="bold">TheASDFamily</p>
           <p>

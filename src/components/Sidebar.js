@@ -28,6 +28,25 @@ const Sidebar = () => {
           <nav className={sidebar ? 'nav-menu active' : 'nav-menu'}>
             <ul className="nav-menu-items">
               <li>
+                <li className="nav-text">
+                  <Link to="/past-year-paper">
+                    <AiIcons.AiOutlineFileText />
+                    <span className="sidebar-text">Past Year Papers</span>
+                  </Link>
+                </li>
+
+                <li className="nav-text">
+                  <Link to="https://data-viz-iota.vercel.app" target="_blank">
+                    <AiIcons.AiOutlineDollar />
+                    <span className="sidebar-text">Salary Insights</span>
+                  </Link>
+                </li>
+                <li className="nav-text">
+                  <Link to="/logsheet">
+                    <AiIcons.AiOutlineDownload />
+                    <span className="sidebar-text">BOA Logsheet</span>
+                  </Link>
+                </li>
                 <li
                   className="nav-text"
                   onClick={(e) => {
@@ -36,19 +55,7 @@ const Sidebar = () => {
                 >
                   <Link>
                     <AiIcons.AiFillFolderOpen />
-                    <span>Reference Materials</span>
-                  </Link>
-                </li>
-                <li className="nav-text">
-                  <Link to="/logsheet">
-                    <AiIcons.AiOutlineDownload />
-                    <span>BOA Logsheet</span>
-                  </Link>
-                </li>
-                <li className="nav-text">
-                  <Link to="/past-year-paper">
-                    <AiIcons.AiOutlineFileText />
-                    <span>Past Year Papers</span>
+                    <span className="sidebar-text">Reference Materials</span>
                   </Link>
                 </li>
               </li>

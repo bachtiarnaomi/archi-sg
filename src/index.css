@@ -34,20 +34,16 @@ img {
 .App {
   /* background-color: #f9f4ee; */
   background-image: url('archi-sg-background.png');
-  /* background-image: url('archi-sg-background.png'); */
   background-color: #f9f4ee;
   background-position: bottom;
   /* background-size: cover;
   height: auto; */
-  overflow-x: hidden;
   background-repeat: no-repeat;
   background-size: contain;
   min-height: 100vh;
   max-width: 100%;
   /* overflow: hidden; */
   height: auto;
-  /* min-height: 100vh; */
-  /* height: 100vh; */
   width: 100vw;
   min-width: 100%;
   position: absolute;
@@ -116,6 +112,15 @@ img {
   width: 100%;
   font-size: 20px;
 }
+.logo-container {
+  display: none;
+  margin: 0;
+  padding: 0;
+}
+.logo-container img {
+  width: 40px;
+  height: 40px;
+}
 .navbar {
   padding: 10px;
   top: 0;
@@ -161,7 +166,7 @@ img {
 .content {
   background-color: transparent;
   max-width: 100%;
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
   display: flex;
   /* margin: 40px auto; */
   margin-top: 10px;
@@ -517,9 +522,6 @@ img {
 .cards {
   align-items: left;
   background-color: transparent;
-  overflow: hidden;
-  /* padding: 2px 16px; */
-  /* gap: 15px; */
 }
 
 .cards img {
@@ -546,13 +548,17 @@ img {
     display: block;
     margin-bottom: 20px;
   }
+
   .home h3 {
     font-size: 20px;
   }
   .home p {
     font-size: 16px;
   }
-
+  .navbar .links a {
+    font-size: 16px;
+    padding: 0;
+  }
   .quiz-app,
   .communities,
   .about,
@@ -566,6 +572,16 @@ img {
     padding: 10px;
   }
   .navbar .title b {
+    display: none;
+    margin: none;
+  }
+  .logo-container {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .logo-container {
     display: none;
   }
 }

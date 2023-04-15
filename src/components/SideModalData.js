@@ -207,12 +207,12 @@ export const SideModalData = [
     header: 'NParks',
     content: [
       {
-        title: 'Greenery Provision for Roadside (2019)',
-        path: '',
+        title: 'Guidelines for Greenery Provision',
+        path: 'https://www.nparks.gov.sg/-/media/nparks-real-content/partner-us/nparks-handbook-version-4.ashx',
       },
       {
         title: 'Greenery Provision within Premises (2019)',
-        path: '',
+        path: 'https://www.nparks.gov.sg/-/media/nparks-real-content/partner-us/nparks-handbook-version-4.ashx',
       },
       {
         title: 'Open Space for Landed Housing (2019)',
@@ -224,12 +224,12 @@ export const SideModalData = [
       },
       {
         title:
-          'NParks Guidelines on Greenery Provision and Tree  Conservation for Developments (2019)',
+          'NParks Guidelines on Greenery Provision and Tree Conservation for Developments (2019)',
         path: '',
       },
       {
         title: 'Circulars (2011 - Present)',
-        path: '',
+        path: 'https://www.nparks.gov.sg/partner-us/development-plan-submission/circulars',
       },
     ],
   },
@@ -238,39 +238,39 @@ export const SideModalData = [
     content: [
       {
         title: 'Code of Practice on Vehicular Parking (2019)',
-        path: '',
+        path: 'https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/Vehicle_Parking_Proposals/COP_on_Vehicle_Parking_Provision_in_Development_Proposals-2019_Edition.pdf',
       },
       {
         title: 'Code of Practice on Street Works (2019)',
-        path: '',
+        path: 'https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/Street_Work_Proposals/codes_of_practice/RT-COP_V2.0_April_2019.pdf',
       },
       {
         title: 'Code of Practice on Public Street Works (2018)',
-        path: '',
+        path: 'https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/public_streets/pdf/COP_for_Works_on_Public_Streets_Mar2022Ed.pdf',
       },
       {
         title: 'Code of Practice on Traffic Control Work Zone (2019)',
-        path: '',
+        path: 'https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/Street_Work_Proposals/codes_of_practice/COP_Traffic_Control_at_Work_Zone_July_2019_Edition.pdf',
       },
       {
         title: 'Code of Practice on Railway Protection (2004)',
-        path: '',
+        path: 'https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/Building_Works_Restricted_Activities_in_Railway_Protection_Zone/Codes_of_Practice_Standards_Specifications_Guides_Forms/Code_of_Practice_for_Railway_Protection.pdf',
       },
       {
         title: 'LTA Walking and Cycling Plan',
-        path: '',
+        path: 'https://www.lta.gov.sg/content/ltagov/en/industry_innovations/industry_matters/development_construction_resources/walking_cycling_plan.html',
       },
       {
-        title: 'Guidelines for Traffic Impact Assessment (2019)',
-        path: '',
+        title: 'Guidelines for Transport Impact Assessment (2019)',
+        path: 'https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/Street_Work_Proposals/Guidelines/TIA_Guidelines_WCP_Final_07Dec2018.pdf',
       },
       {
         title: 'Active Mobility',
-        path: '',
+        path: 'https://sso.agc.gov.sg/SL/AMA2017-S251-2018',
       },
       {
         title: 'Circulars (2007 - Present)',
-        path: '',
+        path: 'https://www.corenet.gov.sg/general/e-info/Circulars.aspx?agency=66110',
       },
       {
         title: 'Calculations - Car Parking Provisions',
@@ -282,24 +282,24 @@ export const SideModalData = [
     header: 'PUB',
     content: [
       {
-        title: 'Code of Practice on Sewerage & Sanitary (2019)',
-        path: '',
+        title: 'Code of Practice on Sewerage and Sanitary Works (2019)',
+        path: 'https://www.pub.gov.sg/Documents/COPSSW2nded2019AddendumNo1_final.pdf',
       },
       {
         title: 'Code of Practice on Surface Water Drainage (2018)',
-        path: '',
+        path: 'https://www.pub.gov.sg/Documents/COP_Surface%20Water%20Drainage_7th%20Ed%20Add.%201.pdf',
       },
       {
         title: 'Guidelines on ABC Water (2014)',
-        path: '',
+        path: 'https://www.pub.gov.sg/abcwaters/designguidelines',
       },
       {
         title: 'Technical Guide for On-site Stormwater Detention Tank Systems',
-        path: '',
+        path: 'https://www.pub.gov.sg/drainage/guidesandhandbooks',
       },
       {
         title: 'Circulars (2015 - Present)',
-        path: '',
+        path: 'https://www.pub.gov.sg/compliance/industry/circulars',
       },
     ],
   },
@@ -308,7 +308,7 @@ export const SideModalData = [
     content: [
       {
         title: 'Code of Practice on Environmental Health (Sep 2021)',
-        path: '',
+        path: 'https://www.nea.gov.sg/docs/default-source/resource/practices-/copeh-2021.pdf',
       },
       {
         title: 'Code of Practice on Pollution Control (Feb 2009)',
@@ -317,15 +317,15 @@ export const SideModalData = [
       {
         title:
           'Boundary Noise Limit for ACMV Systems in Non-industrial Buildings',
-        path: '',
+        path: 'https://www.nea.gov.sg/our-services/pollution-control/noise-pollution/industrial-noise-control',
       },
       {
-        title: 'Technical Guideline on Noise Impact Assessment',
-        path: '',
+        title: 'Technical Guideline for Land Traffic Noise Impact Assessment',
+        path: 'https://www.nea.gov.sg/docs/default-source/our-services/building-planning/technical-guideline-for-land-traffic-noise-impact-assessment.pdf',
       },
       {
         title: 'Circulars (2013 - Present)',
-        path: '',
+        path: 'https://www.nea.gov.sg/corporate-functions/resources/circulars/circulars',
       },
       {
         title: 'Calculations - Refuse Output',
@@ -342,19 +342,19 @@ export const SideModalData = [
     content: [
       {
         title: 'Workplace Safety and Health Act (Chapter 354A)',
-        path: '',
+        path: 'https://sso.agc.gov.sg/Act-Rev/354A/Published/20090731?DocDate=20090731',
       },
       {
         title: 'Code of Practice for Working Safely at Heights',
-        path: '',
+        path: 'https://www.tal.sg/wshc/-/media/tal/wshc/resources/publications/codes-of-practice/files/wsh-code-of-practice-2013_ebook.ashx',
       },
       {
         title: 'Code of Practice on Safe Lifting Operations in the Workplaces',
-        path: '',
+        path: 'https://www.tal.sg/wshc/-/media/tal/wshc/resources/publications/codes-of-practice/files/code_of_practice_safe_lifting_operations_revised_2014.ashx',
       },
       {
         title: 'Workplace Safety and Health Guidelines - Design for Safety',
-        path: '',
+        path: 'https://www.tal.sg/wshc/-/media/tal/wshc/resources/publications/wsh-guidelines/files/dfs.ashx',
       },
       {
         title: 'Design for Safety',
@@ -362,7 +362,7 @@ export const SideModalData = [
       },
       {
         title: 'Circulars (2013 - Present)',
-        path: '',
+        path: 'https://www.mom.gov.sg/workplace-safety-and-health/wsh-circulars',
       },
     ],
   },

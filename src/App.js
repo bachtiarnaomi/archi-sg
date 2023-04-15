@@ -1,5 +1,6 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import './App.css';
+import ReactGA from 'react-ga4';
 import Navbar from './components/Navbar';
 import Sidebar from './components/Sidebar';
 import NotFound from './components/NotFound';
@@ -16,6 +17,10 @@ import Contact from './routes/Contact';
 import $ from 'jquery';
 
 function App() {
+  const TRACKING_ID = 'G-RW3DCXL7PN';
+  ReactGA.initialize(TRACKING_ID);
+  ReactGA.send({ hitType: 'pageview', page: '/' });
+
   const [modal, setModal] = useState(false);
   const [sidebar, setSidebar] = useState(() => {
     if ($(window).width() < 768) return false;

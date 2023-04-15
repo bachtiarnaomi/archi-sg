@@ -18,7 +18,7 @@ const Sidebar = () => {
   };
   return (
     <>
-      <IconContext.Provider value={{ color: 'white' }}>
+      <IconContext.Provider value={{ color: 'black' }}>
         <div className="sidebar-container">
           <div className={sidebar ? 'sidebar active' : 'sidebar'}>
             <Link to="#" className="menu-bars">

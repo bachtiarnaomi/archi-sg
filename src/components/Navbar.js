@@ -16,6 +16,9 @@ const Navbar = () => {
         </Link>
       </div>
       <Link className="title" to="/">
+        <div className="logo-container">
+          <img src="images/logo-archi-sg.png" alt="" />
+        </div>
         <b>Archi.sg</b>
       </Link>
       <div className="links">

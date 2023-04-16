@@ -12,7 +12,7 @@ function Quiz({ year }) {
   const { answers, setAnswers } = useContext(QuizContext);
   useEffect(() => {
     console.log('get quiz', year);
-    axios.get(`https://13.251.27.235/quiz/get-by-year/${year}`).then((res) => {
+    axios.get(`https://www.archi.sg/quiz/get-by-year/${year}`).then((res) => {
       console.log('res', res);
       setQuestions(res.data[0].mcq);
     });

@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/static/css/main.6aeb9eb6.css",
-    "main.js": "/static/js/main.dd3066ad.js",
+    "main.js": "/static/js/main.29101461.js",
     "static/js/787.13b3eb4b.chunk.js": "/static/js/787.13b3eb4b.chunk.js",
     "static/media/archi-sg-background.png": "/static/media/archi-sg-background.5cf2a49cc9afdab9dfc9.png",
     "index.html": "/index.html",
     "main.6aeb9eb6.css.map": "/static/css/main.6aeb9eb6.css.map",
-    "main.dd3066ad.js.map": "/static/js/main.dd3066ad.js.map",
+    "main.29101461.js.map": "/static/js/main.29101461.js.map",
     "787.13b3eb4b.chunk.js.map": "/static/js/787.13b3eb4b.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.6aeb9eb6.css",
-    "static/js/main.dd3066ad.js"
+    "static/js/main.29101461.js"
   ]
 }

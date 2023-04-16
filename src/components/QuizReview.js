@@ -63,6 +63,7 @@ function QuizReview({ year }) {
                   answers[index] == question.answer ? '#e9f5e8' : '#F9CBC7',
               }}
             >
+              <p className="bold">Correct answer: {question.answer}</p>
               <p className="bold">Explanation:</p>
               {question.explanation}
             </p>

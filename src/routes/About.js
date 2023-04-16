@@ -8,9 +8,16 @@ function About() {
         convenient location. The website is envisioned to be the home page for
         individuals who are on their journey to becoming a Qualified
         Practitioner (QP). <br /> <br />
-        This website has been developed independently. It has no affiliations to
-        any official organisations. That being said, it leverages on existing
-        resources that various groups have organised.
+        This website has been developed independently by{' '}
+        <a
+          className="link"
+          href="https://www.linkedin.com/in/naomi-bachtiar/"
+          target="_blank"
+        >
+          Naomi Bachtiar
+        </a>
+        . It has no affiliations to any official organisations. That being said,
+        it leverages on existing resources that various groups have organised.
         <br />
         <br />
         <h3>

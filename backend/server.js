@@ -14,7 +14,7 @@ const port = process.env.PORT || 3003;
 app.use(cors());
 app.use(express.json());
 const uri = process.env.ATLAS_URI;
-mongoose.connect(uri);
+mongoose.connect(uri, { ssl: true });
 const connection = mongoose.connection;
 connection.once('open', () => {
   console.log('Mongoose database connection established');

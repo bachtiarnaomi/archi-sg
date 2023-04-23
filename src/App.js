@@ -15,11 +15,12 @@ import Logsheet from './routes/Logsheet';
 import About from './routes/About';
 import Contact from './routes/Contact';
 import $ from 'jquery';
+import CommunityAnswers from './routes/CommunityAnswers';
 
 function App() {
-  const TRACKING_ID = 'G-RW3DCXL7PN';
-  ReactGA.initialize(TRACKING_ID);
-  ReactGA.send({ hitType: 'pageview', page: '/' });
+  // const TRACKING_ID = 'G-RW3DCXL7PN';
+  // ReactGA.initialize(TRACKING_ID);
+  // ReactGA.send({ hitType: 'pageview', page: '/' });
 
   const [modal, setModal] = useState(false);
   const [sidebar, setSidebar] = useState(() => {
@@ -60,6 +61,7 @@ function App() {
             <Route path="/past-year-paper/" element={<QuizSelection />}></Route>
             <Route path="/communities/" element={<Communities />}></Route>
             <Route path="/logsheet/" element={<Logsheet />}></Route>
+            <Route path="/comments/" element={<CommunityAnswers />}></Route>
             <Route path="/2016/" element={<QuizApp year="2016" />}></Route>
             <Route path="/2017/" element={<QuizApp year="2017" />}></Route>
             <Route path="/2018/" element={<QuizApp year="2018" />}></Route>

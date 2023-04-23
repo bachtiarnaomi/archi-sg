@@ -21,8 +21,10 @@ connection.once('open', () => {
 });
 
 const quizRouter = require('./routes/quiz');
+const answerRouter = require('./routes/answer');
 
 app.use('/quiz', quizRouter);
+app.use('/answer', answerRouter);
 
 app.use(express.static(buildPath));
 app.get('/*', function (req, res) {

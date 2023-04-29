@@ -12,7 +12,8 @@ function Quiz({ year }) {
   const { answers, setAnswers } = useContext(QuizContext);
   useEffect(() => {
     console.log('get quiz', year);
-    axios.get(`https://www.archi.sg/quiz/get-by-year/${year}`).then((res) => {
+    axios.get(`http://localhost:3003/quiz/get-by-year/${year}`).then((res) => {
+      // axios.get(`https://www.archi.sg/quiz/get-by-year/${year}`).then((res) => {
       console.log('res', res);
       setQuestions(res.data[0].mcq);
     });
@@ -62,6 +63,12 @@ function Quiz({ year }) {
         currQuestion={currQuestion}
         nQuestions={questions.length}
       ></ProgressBar>
+      <button
+        className="action"
+        onClick={() => (window.location.href = `/${year}/paper2`)}
+      >
+        Next Segment
+      </button>
       <p className="prompt">{questions[currQuestion].prompt}</p>
       <div ref={ref} id="options">
         <button

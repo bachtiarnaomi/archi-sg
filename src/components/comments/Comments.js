@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useContext } from 'react';
 import axios from 'axios';
 import CommentForm from './CommentForm';
 import Comment from './Comment';
@@ -9,12 +9,21 @@ import {
   deleteComment as deleteCommentApi,
 } from '../../helpers/api';
 
-import { getAnswers as getAnswersApi } from '../../helpers/answers.api';
+import { EssayContext } from '../../helpers/Contexts';
 
-const Comments = ({ currentUserId }) => {
+import { getAnswers as getAnswersApi } from '../../helpers/answers.api';
+import Login from '../auth/login';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import { auth } from '../../helpers/firebase';
+
+const Comments = ({ questionId }) => {
+  const [user, loading] = useAuthState(auth);
   const [backendComments, setBackendComments] = useState([]);
   const [topAnswers, setTopAnswers] = useState([]);
   const [activeComment, setActiveComment] = useState(null);
+
+  const { currQuestion, subCount, questions, isSub } = useContext(EssayContext);
+  console.log('user', user);
   const rootComments = backendComments.filter(
     (comment) => comment.parentId == null
   );
@@ -48,28 +57,35 @@ const Comments = ({ currentUserId }) => {
   };
 
   const getTopAnswer = (comments) => {
+    if (comments.length == 0) return [];
     const topAnswers = [];
     const copied = [...comments];
     copied.sort((a, b) => b.vote - a.vote);
-    const maxVote = copied[0].vote;
-    if (maxVote < 3) return;
-    console.log('copied', copied, maxVote);
+    let maxVote = 1;
+    // console.log('copied', copied, maxVote);
     for (const comment of copied) {
-      if (comment.vote == maxVote) topAnswers.push(comment);
-      else {
+      if (comment.parentId != null) continue;
+      if (comment.vote >= maxVote) {
+        topAnswers.push(comment);
+        maxVote = comment.vote;
+      } else {
         console.log('top answers', topAnswers);
         return topAnswers;
       }
     }
+    return topAnswers;
   };
-  const addComment = (text, parentId, username = 'Anonymous User') => {
-    console.log('add comment', text, parentId);
+  const addComment = (text, parentId) => {
+    // console.log('add comment', text, parentId);
     // createCommentApi(text, parentId).then((comment) => {
     //   setBackendComments([comment, ...backendComments]);
     //   setActiveComment(null);
     // });
+    const username = user?.displayName || 'Anonymous User';
+    const userId = user?.uid || null;
     const createdAt = new Date().toISOString();
-    const answer = { text, parentId, createdAt, username };
+    console.log('the user', user, username, userId);
+    const answer = { text, parentId, createdAt, username, userId, questionId };
     axios.post('http://localhost:3003/answer/add', answer).then((comment) => {
       setBackendComments([comment.data, ...backendComments]);
       console.log([comment.data, ...backendComments]);
@@ -79,12 +95,15 @@ const Comments = ({ currentUserId }) => {
   const deleteComment = (commentId) => {
     if (window.confirm('Are you sure you want to remove comment?')) {
       console.log('delete comment', commentId);
-      deleteCommentApi(commentId).then((comment) => {
-        const updatedBackendComments = backendComments.filter(
-          (backendComment) => backendComment._id !== commentId
-        );
-        setBackendComments(updatedBackendComments);
-      });
+      axios
+        .delete(`http://localhost:3003/answer/delete/${commentId}`)
+        .then((comment) => {
+          console.log('deleted');
+          const updatedBackendComments = backendComments.filter(
+            (backendComment) => backendComment._id !== commentId
+          );
+          setBackendComments(updatedBackendComments);
+        });
     }
   };
 
@@ -134,33 +153,64 @@ const Comments = ({ currentUserId }) => {
       });
   };
   useEffect(() => {
-    // getAnswersApi().then((data) => {
-    //   setBackendComments(data);
-    // });
-    axios.get(`http://localhost:3003/answer/`).then((res) => {
-      res.data.sort(
-        (a, b) =>
-          new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime()
-      );
-      setBackendComments(res.data);
-      const topAnswers = getTopAnswer(res.data);
-      if (topAnswers) setTopAnswers(topAnswers);
-      console.log('answers', res.data);
-    });
+    axios
+      .get(`http://localhost:3003/answer/get-by-question/${questionId}`)
+      .then((res) => {
+        res.data.sort(
+          (a, b) =>
+            new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime()
+        );
+        setBackendComments(res.data);
+        const newTopAnswers = getTopAnswer(res.data);
+        if (newTopAnswers) setTopAnswers(newTopAnswers);
+        else setTopAnswers([]);
+        // console.log('answers', res.data);
+      });
+  }, [questionId]);
+  useEffect(() => {
+    console.log('mounting component');
+    axios
+      .get(`http://localhost:3003/answer/get-by-question/${questionId}`)
+      .then((res) => {
+        res.data.sort(
+          (a, b) =>
+            new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime()
+        );
+        setBackendComments(res.data);
+        const newTopAnswers = getTopAnswer(res.data);
+        if (newTopAnswers) setTopAnswers(newTopAnswers);
+        else setTopAnswers([]);
+        console.log('answers', res.data);
+      });
   }, []);
 
   return (
     <div className="comments">
-      <h3 className="comments-title">Answers for question 1.1</h3>
+      {!user && (
+        <div>You are not signed in. Answers posted will be anonymous.</div>
+      )}
+      {user && <div>logged in!</div>}
+      <Login />
+      <h3 className="comments-title">
+        {`Answers for ${questionId}`}
+        {/* {'Answers for ' + questions[currQuestion]?.subtitle + ' '}
+        {questions[currQuestion]?.subQuestions[subCount] &&
+          String.fromCharCode(subCount + 97)} */}
+      </h3>
       <div className="comment-form-title">Write your answer</div>
-      <CommentForm submitLabel="Write" handleSubmit={addComment} />
+      <CommentForm
+        submitLabel="Write"
+        handleSubmit={addComment}
+        username={user?.displayName}
+        userId={user?.uid}
+      />
       <div className="comments-container">
         {topAnswers.map((rootComment) => (
           <Comment
             key={rootComment._id}
+            currentUserId={user?.uid}
             comment={rootComment}
             replies={getReplies(rootComment._id)}
-            currentUserId={currentUserId}
             addComment={addComment}
             deleteComment={deleteComment}
             activeComment={activeComment}
@@ -172,22 +222,26 @@ const Comments = ({ currentUserId }) => {
             topComment={true}
           />
         ))}
-        {rootComments.map((rootComment) => (
-          <Comment
-            key={rootComment._id}
-            comment={rootComment}
-            replies={getReplies(rootComment._id)}
-            currentUserId={currentUserId}
-            addComment={addComment}
-            deleteComment={deleteComment}
-            activeComment={activeComment}
-            setActiveComment={setActiveComment}
-            updateComment={updateComment}
-            addVote={addVote}
-            decreaseVote={decreaseVote}
-            getCookie={getCookie}
-          />
-        ))}
+        {rootComments.map((rootComment) => {
+          if (topAnswers[0] && rootComment._id == topAnswers[0]._id)
+            return <div></div>;
+          return (
+            <Comment
+              key={rootComment._id}
+              comment={rootComment}
+              replies={getReplies(rootComment._id)}
+              currentUserId={user?.uid}
+              addComment={addComment}
+              deleteComment={deleteComment}
+              activeComment={activeComment}
+              setActiveComment={setActiveComment}
+              updateComment={updateComment}
+              addVote={addVote}
+              decreaseVote={decreaseVote}
+              getCookie={getCookie}
+            />
+          );
+        })}
       </div>
     </div>
   );

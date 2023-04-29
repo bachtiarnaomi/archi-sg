@@ -16,7 +16,16 @@ router.route('/add').post((req, res) => {
   const parentId = req.body.parentId;
   const createdAt = req.body.createdAt;
   const questionId = req.body.questionId;
-  const newAnswer = new Answer({ text, parentId, createdAt });
+  const username = req.body.username;
+  const userId = req.body.userId;
+  const newAnswer = new Answer({
+    text,
+    parentId,
+    createdAt,
+    questionId,
+    username,
+    userId,
+  });
 
   newAnswer
     .save()
@@ -25,9 +34,9 @@ router.route('/add').post((req, res) => {
 });
 
 // find by property
-router.route('/get-by-year/:year').get((req, res) => {
-  console.log('get by year', req.params.year);
-  Answer.find({ year: req.params.year })
+router.route('/get-by-question/:questionId').get((req, res) => {
+  console.log('get by question', req.params.year);
+  Answer.find({ questionId: req.params.questionId })
     .then((answer) => {
       res.json(answer);
     })
@@ -45,6 +54,12 @@ router.route('/:id').get((req, res) => {
     .catch((err) => res.status(400).json('Error: ' + err));
 });
 
+router.route('/delete/:id').delete((req, res) => {
+  console.log('deleting');
+  Answer.deleteOne({ _id: req.params.id })
+    .then((answer) => res.json(answer))
+    .catch((err) => res.status(400).json('Error: ' + err));
+});
 router.route('/vote').post(async (req, res) => {
   // Get the comment ID from the request body
   const commentId = req.body.commentId;

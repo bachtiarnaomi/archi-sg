@@ -16,7 +16,8 @@ import About from './routes/About';
 import Contact from './routes/Contact';
 import $ from 'jquery';
 import CommunityAnswers from './routes/CommunityAnswers';
-
+import Essay from './components/Essay';
+import Login from './components/auth/login';
 function App() {
   // const TRACKING_ID = 'G-RW3DCXL7PN';
   // ReactGA.initialize(TRACKING_ID);
@@ -61,11 +62,28 @@ function App() {
             <Route path="/past-year-paper/" element={<QuizSelection />}></Route>
             <Route path="/communities/" element={<Communities />}></Route>
             <Route path="/logsheet/" element={<Logsheet />}></Route>
+            <Route path="/login/" element={<Login year="2016" />}></Route>
             <Route path="/comments/" element={<CommunityAnswers />}></Route>
             <Route path="/2016/" element={<QuizApp year="2016" />}></Route>
+            <Route
+              path="/2016/paper-2/"
+              element={<Essay year="2016" />}
+            ></Route>
             <Route path="/2017/" element={<QuizApp year="2017" />}></Route>
+            <Route
+              path="/2017/paper-2/"
+              element={<Essay year="2017" />}
+            ></Route>
             <Route path="/2018/" element={<QuizApp year="2018" />}></Route>
+            <Route
+              path="/2018/paper-2/"
+              element={<Essay year="2018" />}
+            ></Route>
             <Route path="/2019/" element={<QuizApp year="2019" />}></Route>
+            <Route
+              path="/2019/paper-2/"
+              element={<Essay year="2019" />}
+            ></Route>
             <Route path="*" element={<NotFound />}></Route>
           </Routes>
         </div>

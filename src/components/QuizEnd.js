@@ -13,11 +13,17 @@ function QuizEnd({ year }) {
         Score: {score}/{questions.length}
       </h3>
       <QuizReview></QuizReview>
-      {/* <p>
+      <p>
         The next segment is open ended. Suggested answers from the community
         will be displayed alongside the question.
       </p>
-      <button className="action">Next Segment</button> */}
+      <button
+        className="action"
+        onClick="location.href='/year/part-2'"
+        type="button"
+      >
+        Next Segment
+      </button>
     </div>
   );
 }

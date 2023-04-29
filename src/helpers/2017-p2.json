@@ -1,0 +1,79 @@
+{
+  "2017": [
+    {
+      "title": "Question 2",
+      "subtitle": "2.01",
+      "mainQuestion": "State 5 key items you would include in the Contract Preliminaries and explain their importance",
+      "subQuestions": [],
+      "marks": [5]
+    },
+    {
+      "title": "Question 2",
+      "subtitle": "2.02",
+      "mainQuestion": "You have been appointed as the Architect for a large and complex mixed used development next to an operation MRT Station.",
+      "subQuestions": [
+        "You have recommended that due to the complexity of the project in terms of specialist works / safety / scope etc., a Pre-Qualification process will ensure that the appropriate tenderers are selected for the subsequent tender.\n\nHighlight 5 Key Pre-Qualification criteria and explain their importance.",
+        "The Pre-qualification exercise has been completed and the tenderers have been pre-qualified for the subsequent tender.\n\nWhat are the procedural measures that you would put in place to ensure that the subsequent tender would be fair and transparent, and best serve the project?",
+        "The tender is now closed. Describe the subsequent process to evaluate the tenders using industry norms and criteria to evaluate the tender submissions.",
+        "Prepare a Letter of Acceptance to the main contractor in a proper format, listing down the key items to be documented."
+      ],
+      "marks": [5, 3, 5, 12]
+    },
+    {
+      "title": "Question 3",
+      "subtitle": "3.01",
+      "mainQuestion": "You are the Architect for a project administering the SIA Building Contract. The Employer  visits the site and gives orders directly to the Contractor to alter the Contractor's site operations and method of working claiming that it is better.\n\nIn your answers, please make references to the relevant Articles and Clauses.",
+      "subQuestions": [
+        "Is the Contractor obliged to comply? How would you advise the Employer?",
+        "How would you address the situation?"
+      ],
+      "marks": [6, 4]
+    },
+    {
+      "title": "Question 3",
+      "subtitle": "3.02",
+      "mainQuestion": "In the course of administering the Contract, some discrepancies were discovered. The contract drawings show 4 pavilions; however the Schedule of Works (SOW) states only 3 pavilions. The Contractor asserts that the fourth pavilion is a variation as he has based his pricing on the SOW, and requests for an Architect's Instruction (AI) to be issued.\n\nIn your answers please make reference to the relevant Articles and Clauses.",
+      "subQuestions": [
+        "How would you respond to the Contractor under the Lump Sum form?",
+        "How would you respond to the Contractor under the Measurement form, where only 3 pavilions were stated in the Bill of Quantities (BQ)?"
+      ],
+      "marks": [3, 3]
+    },
+    {
+      "title": "Question 3",
+      "subtitle": "3.03",
+      "mainQuestion": "",
+      "subQuestions": [
+        "How does the SIA Building Contract provide for cash flow to the Contractor?",
+        "The Contractor is experiencing cash flow issues and requests for help from the Employer. The Employer instructs you to certify in the next Interim Certificate 'advance payment' to the Contractor.\n\nHow would you advise the Employer? Explain your reasons."
+      ],
+      "marks": [4, 10]
+    },
+    {
+      "title": "Question 4",
+      "subtitle": "4.01",
+      "mainQuestion": "During the project site meeting, the Employer requested for additional works to be carried out. This was recorded in the minutes of meeting which also noted that EOT may be granted. The Contractor carried out the works on site immediately, and completed the task. Subsequently the Contractor submitted the notice for Extension of Time (EOT) after 2 months.",
+      "subQuestions": [
+        "Under the SIA Building Contract, is the Contractor entitled to the EOT assessment? Please cite the relevant clause(s) to support your argument.",
+        "When does the Architect have to determine the period of EOT?",
+        "You requested for more information from the Contractor to assess the EOT. After 28 days the Contractor has still failed to provide the information.\n\nWhat is your next course of action? Explain your reasons",
+        "While you are in the midst of assessing the EOT claims based on your own available information, the contractor subsequently submits additional relevant information after the 28 days has passed, stating that the delay is due to the Employer's direct contractor. Explain your next course of action?"
+      ],
+      "marks": [6, 3, 3, 4]
+    },
+    {
+      "title": "",
+      "subtitle": "",
+      "mainQuestion": "",
+      "subQuestions": [],
+      "marks": []
+    },
+    {
+      "title": "",
+      "subtitle": "",
+      "mainQuestion": "",
+      "subQuestions": [],
+      "marks": []
+    }
+  ]
+}

@@ -3,6 +3,7 @@ import { deleteComment } from '../../helpers/api';
 import CommentForm from './CommentForm';
 import * as FaIcons from 'react-icons/fa';
 import { useState } from 'react';
+import { IoMdArrowDropdown } from 'react-icons/io';
 
 const Comment = ({
   comment,
@@ -27,6 +28,7 @@ const Comment = ({
   const [hasVoted, setHasVoted] = useState(
     getCookie(`comment_${comment._id}_voted`)
   );
+  const [show, setShow] = useState(false);
   const isReplying =
     activeComment &&
     activeComment.type === 'replying' &&
@@ -148,6 +150,12 @@ const Comment = ({
           />
         )}
         {replies.length > 0 && (
+          <div className="comment-actions">
+            <IoMdArrowDropdown />
+            Show replies
+          </div>
+        )}
+        {show && replies.length > 0 && (
           <div className="replies">
             {replies.map((reply) => (
               <Comment

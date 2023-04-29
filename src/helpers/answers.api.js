@@ -1,9 +1,9 @@
 import axios from 'axios';
 
 const questionId = '2017.2.01';
-export const getAnswers = axios.get(
-  `http://localhost:3003/answer/questionId/${questionId}`
-);
+// export const getAnswers = axios.get(
+//   `http://localhost:3003/answer/questionId/${questionId}`
+// );
 
 export function addAnswer(goal) {
   axios.post('http://localhost:3003/answer/add', goal);

@@ -14,18 +14,20 @@ function Quiz({ year }) {
   const { answers, setAnswers } = useContext(QuizContext);
   useEffect(() => {
     if (paper == '1') {
-      axios.get(`http://www.archi.sg/quiz/get-by-year/${year}`).then((res) => {
+      axios.get(`https://www.archi.sg/quiz/get-by-year/${year}`).then((res) => {
         // axios.get(`https://www.archi.sg/quiz/get-by-year/${year}`).then((res) => {
         console.log('res', res);
         setQuestions(res.data[0].mcq);
         setEssays(res.data[0].essay);
       });
     } else if (paper == '2') {
-      axios.get(`http://www.archi.sg/quiz2/get-by-year/${year}`).then((res) => {
-        // axios.get(`https://www.archi.sg/quiz/get-by-year/${year}`).then((res) => {
-        setQuestions(res.data[0].mcq);
-        setEssays(res.data[0].essay);
-      });
+      axios
+        .get(`https://www.archi.sg/quiz2/get-by-year/${year}`)
+        .then((res) => {
+          // axios.get(`https://www.archi.sg/quiz/get-by-year/${year}`).then((res) => {
+          setQuestions(res.data[0].mcq);
+          setEssays(res.data[0].essay);
+        });
     }
   }, []);
   const ref = useRef(null);

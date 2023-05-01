@@ -19,9 +19,9 @@ import CommunityAnswers from './routes/CommunityAnswers';
 import Essay from './components/Essay';
 import Login from './components/auth/login';
 function App() {
-  // const TRACKING_ID = 'G-RW3DCXL7PN';
-  // ReactGA.initialize(TRACKING_ID);
-  // ReactGA.send({ hitType: 'pageview', page: '/' });
+  const TRACKING_ID = 'G-RW3DCXL7PN';
+  ReactGA.initialize(TRACKING_ID);
+  ReactGA.send({ hitType: 'pageview', page: '/' });
 
   const [modal, setModal] = useState(false);
   const [sidebar, setSidebar] = useState(() => {

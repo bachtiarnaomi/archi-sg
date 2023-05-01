@@ -26,24 +26,30 @@ function Login() {
   return (
     <div className="login">
       {!user && (
-        <button
-          onClick={() => {
-            console.log('google click');
-            GoogleLogin();
-          }}
-        >
-          <FcGoogle style={{ fontSize: '20px' }} /> Sign in with Google
-        </button>
+        <div>
+          <div>You are not logged in. Please sign in to post answers.</div>
+          <button
+            onClick={() => {
+              console.log('google click');
+              GoogleLogin();
+            }}
+          >
+            <FcGoogle style={{ fontSize: '18px' }} /> Sign in with Google
+          </button>
+        </div>
       )}
       {user && (
-        <button
-          onClick={() => {
-            console.log('signing out');
-            auth.signOut();
-          }}
-        >
-          <FcGoogle style={{ fontSize: '20px' }} /> Sign out
-        </button>
+        <div>
+          <div>{`You are logged in as ${user.displayName}`}</div>
+          <button
+            onClick={() => {
+              console.log('signing out');
+              auth.signOut();
+            }}
+          >
+            <FcGoogle style={{ fontSize: '20px' }} /> Sign out
+          </button>
+        </div>
       )}
     </div>
   );

@@ -19,7 +19,9 @@ function QuizEnd({ year }) {
       </p>
       <button
         className="action"
-        onClick="location.href='/year/part-2'"
+        onClick={() => {
+          setGameState('essay');
+        }}
         type="button"
       >
         Next Segment

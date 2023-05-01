@@ -8,13 +8,17 @@ const CommentForm = ({
   initialText = '',
   username,
   userId,
+  signedin,
 }) => {
   const [text, setText] = useState(initialText);
   const isTextareaDisabled = text.length === 0;
   const onSubmit = (event) => {
     event.preventDefault();
-    handleSubmit(text, null, username, userId);
-    setText('');
+    if (!signedin) alert('Please sign in to submit answers');
+    else {
+      handleSubmit(text, null, username, userId);
+      setText('');
+    }
   };
   return (
     <form onSubmit={onSubmit}>

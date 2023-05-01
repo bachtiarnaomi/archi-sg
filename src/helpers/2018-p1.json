@@ -1,0 +1,230 @@
+{
+  "year": 2018,
+  "mcq": [
+    {
+      "prompt": "Under the Buildable Design Appraisal System, to earn 10 points for prefabricated prefinished volumetric construction (PPVC) adoption, what is the minimum percentage of coverage required?",
+      "optionA": "70%",
+      "optionB": "75%",
+      "optionC": "80%",
+      "optionD": "85%",
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "prompt": "Under the Housing Developers (Show Unit) Rules 2015, which of the following does the licensed housing developer need to state on the drawn-to-scale floor plan:",
+      "optionA": "The address of the depicted unit",
+      "optionB": "The reference number of the approved building plan for the depicted unit",
+      "optionC": "The date of approved building plan for the depicted unit",
+      "optionD": "All of the above",
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "prompt": "Under WSH (Design for Safety) Regulation, what is the minimum project value where the ACT is applicable?",
+      "optionA": "Projects with contract value of $5 million",
+      "optionB": "Projects with contract value of $10 million",
+      "optionC": "Projects with contract value of $15 million",
+      "optionD": "Projects with contract value of $20 million",
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "prompt": "The PUB Active Beautiful Waters programme seeks to",
+      "optionA": "Facilitate high-rise greenery in sky terraces",
+      "optionB": "Act as a permanent water storage system",
+      "optionC": "Manage peak stormwater runoff discharging to the public network of waterways",
+      "optionD": "Enhance developments sited only along coastal developments by providing public amenities and landscaping features",
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "prompt": "In accordance to SS485:2011 (specification for slip resistance classification of pedestrian surface materials) the minimum ramp recommendation for external walkway is",
+      "optionA": "R9",
+      "optionB": "R10",
+      "optionC": "R11",
+      "optionD": "R12",
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "prompt": "Which of the following works would not be covered under the Security of Payment Act?",
+      "optionA": "Provision of architectural services to a commercial project in Singapore which does not require Building Plan submission",
+      "optionB": "Home renovation work for a HDB flat which does not require Building Plan submission",
+      "optionC": "Locally prefabricated components for a building project in Singapore",
+      "optionD": "Home renovation work for landed houses that require Building Plan submission",
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "prompt": "Under the Architects Act, which of the following is considered illegal practice?",
+      "optionA": "A non-architect preparing architectural plans under the direction or supervision of a registered architect",
+      "optionB": "A registered architect endorsing drawings produced by interior designer and intended for statutory submission",
+      "optionC": "A builder offering to supply architectural services, together with a registered architect, in connection with building works undertaken by him",
+      "optionD": "An allied professional offering to supply architectural services in Singapore, in a licensed limited liability partnership",
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "prompt": "Which of the following is true when designing for roof drainage?",
+      "optionA": "Categories of design risk are proposed based on rainfall records",
+      "optionB": "Allowance for the driving effect of wind must always be considered",
+      "optionC": "Calculations are not required when using a siphonic roof drainage system",
+      "optionD": "When calculating effective catchment area, the rainfall angle to the vertical is not taken into consideration",
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "prompt": "As part of the LTA/URA latest bicycle parking standards to cater for the potential spill over of bicycle parking demand from major destination locations, higher bicycle parking provision is required for which of the following:",
+      "optionA": "500m from MRT station",
+      "optionB": "Educational Institutions",
+      "optionC": "Restricted Zone and Marina Bay",
+      "optionD": "All of the above",
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "prompt": "In compliance with the use of claddings on external wall of buildings, which of the following is true?",
+      "optionA": "QP to check Composite panel must be tested to the standards in BS 476 Part 4, BS 476 Part 11, BS 476 Part 7 & BS 476 Part 6 of EN 13501-1",
+      "optionB": "External wall for mounting of composite panels shall have a fire resistance rating of at least 0.5 hour",
+      "optionC": "Cladding situated less than 1m from any point on the relevant boundary shall comply with Class \"1\" surface spread of flame",
+      "optionD": "All of the above",
+      "answer": "A",
+      "explanation": ""
+    }
+  ],
+  "essay": [
+    {
+      "title": "Question 2",
+      "subtitle": "2.01",
+      "mainQuestion": "You are the Project Architect and also the Qualified Person (QP) of a building project with a multi-storey carpark (MSCP).\n\nWhat are your contractual duties under the SIA Conditions of Appointment and your QP's statutory duties under the Building Control Act?",
+      "subQuestions": [],
+      "marks": [4]
+    },
+    {
+      "title": "Question 2",
+      "subtitle": "2.02",
+      "mainQuestion": "You are the Project Architect and also the Qualified Person (QP) of a building project with a multi-storey carpark (MSCP).\n\nAs the project QP, you've applied for the Permit to Commence Work jointly with the builder. Midway through the project, building works at site was suspended for a period of more that 3 months.\n\nDescribe your statutory duties and contractual duties with regards to supervision; and your statutory obligation, given the suspension of the project.",
+      "subQuestions": [],
+      "marks": [6]
+    },
+    {
+      "title": "Question 2",
+      "subtitle": "2.03",
+      "mainQuestion": "You are the Project Architect and also the Qualified Person (QP) of a building project with a multi-storey carpark (MSCP).\n\nPlease discuss the accepted solutions for natural ventilation that must be complied with under the Building Control Regulations and the Code of Practice for Fire Precautions in Buildings under the following conditions.",
+      "subQuestions": [
+        "The minimum provision of openings for natural ventilation and the considered effective opening area for sliding, louvered and casement windows under Building Control Regulations.",
+        "At the MSCP, where natural ventilation is used, please discuss the requirements under the Fire Code."
+      ],
+      "marks": []
+    },
+    {
+      "title": "Question 2",
+      "subtitle": "2.04",
+      "mainQuestion": "You are the Project Architect and also the Qualified Person (QP) of a building project with a multi-storey carpark (MSCP).\n\nUnder the Code of Practice on Buildability, a buildable design score is allocated as a means to measure the potential impact of building design on the usage of labour on site.",
+      "subQuestions": [
+        "Points are allocated according to the 3S principles of standardization, simplicity and single integrated elements. List 2 design strategies or construction methodologies that can be adopted for each of these principles.",
+        "Refer to Figure 1. Discuss why the prefabricated bathrooms units (PBU) fails to meet the requirements for maintenance.\n\nUnder the performance requirement and acceptance framework for PBU, list and discuss another 2 requirements under the architect's scope of works."
+      ],
+      "marks": [6, 6]
+    },
+    {
+      "title": "Question 3",
+      "subtitle": "3.01",
+      "mainQuestion": "You are the Architect for a mixed commercial & residential building. The planning parameters are as follows:\n\nSite area: 4000m²\nMax Allowable plot ratio: 3.0\nStorey height control: 24 storeys.\n\nList down 2 basic information from each of the authorities below, that would influence the planning and layout of the development: \n a) URA \n b) LTA \n c)FSSD\nd) PUB",
+      "subQuestions": [""],
+      "marks": [8]
+    },
+    {
+      "title": "Question 3",
+      "subtitle": "3.02",
+      "mainQuestion": "You are the Architect for a mixed commercial & residential building. The planning parameters are as follows:\n\nSite area: 4000m²\nMax Allowable plot ratio: 3.0\nStorey height control: 24 storeys\n\nThe client wishes to build a shopping podium below with a residential tower above. At the same time, he wishes to maximize the commercial quantum of the development.\n\nHow would you go about deriving the maximum GFA for the commercial component? What is the resultant GFA for each component?",
+      "subQuestions": [],
+      "marks": [2]
+    },
+    {
+      "title": "Question ",
+      "subtitle": "3.03",
+      "mainQuestion": "You are the Architect for a mixed commercial & residential building. The planning parameters are as follows:\n\nSite area: 4000m²\nMax Allowable plot ratio: 3.0\nStorey height control: 24 storeys\n\nPertaining to URA's Landscaping for Urban Spaces and High-Rises (LUSH) Programme, list 2 differences between LUSH 2.0 and LUSH 3.0 and explain the impact it may have on the design of the buildings.",
+      "subQuestions": [],
+      "marks": [2]
+    },
+    {
+      "title": "Question 3",
+      "subtitle": "3.04",
+      "mainQuestion": "You are the Architect for a mixed commercial & residential building. The planning parameters are as follows:\n\nSite area: 4000m²\nMax Allowable plot ratio: 3.0\nStorey height control: 24 storeys\n\nYou are designing a single 24-storey residential block with basement carpark:",
+      "subQuestions": [
+        "Explain how you will comply with FSSD regulations with regards to breeching inlet and fire hydrant.",
+        "The client wishes to locate the clubhouse and function room on the 24th storey. Explain the impact in terms of FSSD compliances."
+      ],
+      "marks": [5, 5]
+    },
+    {
+      "title": "Question 3",
+      "subtitle": "3.05",
+      "mainQuestion": "You are the Architect for a mixed commercial & residential building. The planning parameters are as follows:\n\nSite area: 4000m²\nMax Allowable plot ratio: 3.0\nStorey height control: 24 storeys\n\nRefer to Figure 1.\nList and explain 4 non-commpliances with reference to the Fire Code and Storey Shelter Requirements.",
+      "subQuestions": [],
+      "marks": [8]
+    },
+    {
+      "title": "Question 4",
+      "subtitle": "4.01",
+      "mainQuestion": "You are appointed as the Architect for a 3-storey Community Centre.\n\nYour client would like to install solar photo-voltaic on the roof above the gym.\nDescribe the provisions in terms of fire compliance.",
+      "subQuestions": [],
+      "marks": [8]
+    },
+    {
+      "title": "Question 4",
+      "subtitle": "4.02",
+      "mainQuestion": "If your building is sprinkler protected, explain the advantages for the following:",
+      "subQuestions": ["Exit Requirements", "Comparmentaion Provision"],
+      "marks": [2, 4]
+    },
+    {
+      "title": "Question 4",
+      "subtitle": "4.03",
+      "mainQuestion": "Refer to Figure 1 and 2, answer the following:",
+      "subQuestions": [
+        "Figure 1 - In accordance to SS578 review and explain the inadequacy of fire extinguisher (type 13a) that are provided for in the Gym (area: 980 sqm)",
+        "Figure 2- In compliance to BCA's Code on Accessibility 2013, list any 4 non-compliances and explain with reference to Code."
+      ],
+      "marks": [4, 8]
+    },
+    {
+      "title": "Question 4",
+      "subtitle": "4.04",
+      "mainQuestion": "LTA and URA aim to promote cycling as a mode of transport, so as to enhance liveability and support the car-lite vision for Singapore. Discuss two incentives for provision of active mobility related facilities.",
+      "subQuestions": [],
+      "marks": [4]
+    },
+    {
+      "title": "Question 5",
+      "subtitle": "5.01",
+      "mainQuestion": "You are the Architect for an owner occupied detached house along the junction of Cluny Park.\n\nA roadside tree of more than 2m girth sits adjacent to the existing entrance driveway. The owner wants to fell the tree in order to enlarge his entrance culvert.",
+      "subQuestions": [
+        "Advise why this is subject to NParks' evaluation and detail the measures to accommodate the tree during design and construction.",
+        "You need to relocate the entrance culvert. List the considerations from LTA when planning a new entrance."
+      ],
+      "marks": [6, 5]
+    },
+    {
+      "title": "Question 5",
+      "subtitle": "5.02",
+      "mainQuestion": "You are the Architect for an owner occupied detached house along the junction of Cluny Park.\n\nRefer to Figure 1 and 2, answer the following:",
+      "subQuestions": [
+        "Figure 1. List 5 non-compliances in the basement household shelter and explain with reference to the Code.",
+        "Figure 2. List the 6 non-compliances and explain with reference to PUB's Code of Practice on Sewerage and Sanitary works."
+      ],
+      "marks": [5, 6]
+    },
+    {
+      "title": "Question 5",
+      "subtitle": "5.03",
+      "mainQuestion": "You are the Architect for an owner occupied detached house along the junction of Cluny Park.",
+      "subQuestions": [
+        "You are providing a scupper drain on one of the flat roofs. What are the provisions necessary to comply with NEA's requirements?",
+        "Discuss and detail the requirements of NEA that are applicable to a single landed house. In addition, what are the additional NEA's requirements for a condominium development."
+      ],
+      "marks": [2, 6]
+    }
+  ]
+}

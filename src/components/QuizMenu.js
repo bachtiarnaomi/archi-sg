@@ -2,7 +2,8 @@ import { useState, useContext } from 'react';
 import { QuizContext } from '../helpers/Contexts';
 
 function QuizMenu({ year }) {
-  const { gameState, setGameState } = useContext(QuizContext);
+  const { gameState, setGameState, paper, setPaper, essays } =
+    useContext(QuizContext);
 
   return (
     <div className="quiz">
@@ -22,11 +23,23 @@ function QuizMenu({ year }) {
       <button
         className="action"
         onClick={() => {
+          setPaper(1);
           setGameState('quiz');
         }}
       >
-        Start Quiz
+        Paper 1
       </button>
+      {year == '2017' && (
+        <button
+          className="action"
+          onClick={() => {
+            setPaper(2);
+            setGameState('quiz');
+          }}
+        >
+          Paper 2
+        </button>
+      )}
     </div>
   );
 }

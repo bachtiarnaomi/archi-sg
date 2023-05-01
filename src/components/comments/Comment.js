@@ -3,7 +3,7 @@ import { deleteComment } from '../../helpers/api';
 import CommentForm from './CommentForm';
 import * as FaIcons from 'react-icons/fa';
 import { useState } from 'react';
-import { IoMdArrowDropdown } from 'react-icons/io';
+import { IoMdArrowDropdown, IoMdArrowDropup } from 'react-icons/io';
 
 const Comment = ({
   comment,
@@ -40,6 +40,24 @@ const Comment = ({
 
   const replyId = parentId ? parentId : comment._id;
   const createdAt = new Date(comment.createdAt).toLocaleDateString();
+  const timePassed = (createdAt) => {
+    const date = new Date(createdAt);
+    const now = new Date();
+    const seconds = Math.floor((now - date) / 1000);
+    if (seconds < 60) {
+      return `${seconds} second${seconds <= 1 ? '' : 's'} ago`;
+    }
+    const minutes = Math.floor(seconds / 60);
+    if (minutes < 60) {
+      return `${minutes} minute${minutes === 1 ? '' : 's'} ago`;
+    }
+    const hours = Math.floor(minutes / 60);
+    if (hours < 24) {
+      return `${hours} hour${hours === 1 ? '' : 's'} ago`;
+    }
+    const days = Math.floor(hours / 24);
+    return `${days} day${days === 1 ? '' : 's'} ago`;
+  };
 
   return (
     <div className={topComment ? 'comment-top' : 'comment'}>
@@ -49,7 +67,8 @@ const Comment = ({
       <div className="comment-right-part">
         <div className="comment-content">
           <div className="comment-author">{comment.username}</div>
-          <div className="comment-time">
+          <div className="comment-time">{timePassed(comment.createdAt)}</div>
+          {/* <div className="comment-time">
             {new Date(comment.createdAt).toLocaleDateString()}
           </div>
           <br />
@@ -58,7 +77,7 @@ const Comment = ({
               hour: '2-digit',
               minute: '2-digit',
             })}
-          </div>
+          </div> */}
         </div>
         {!isEditing && <div className="comment-text">{comment.text}</div>}
         {isEditing && (
@@ -85,7 +104,7 @@ const Comment = ({
               Reply
             </div>
           )}
-          {canEdit && (
+          {/* {canEdit && (
             <div
               className="comment-action"
               onClick={() => {
@@ -94,7 +113,7 @@ const Comment = ({
             >
               Edit
             </div>
-          )}
+          )} */}
           {canDelete && (
             <div
               className="comment-action"
@@ -149,10 +168,26 @@ const Comment = ({
             handleSubmit={(text) => addComment(text, replyId)}
           />
         )}
-        {replies.length > 0 && (
-          <div className="comment-actions">
+        {replies.length > 0 && !show && (
+          <div
+            className="show-reply"
+            onClick={() => {
+              setShow(true);
+            }}
+          >
             <IoMdArrowDropdown />
-            Show replies
+            Show {replies.length > 1 ? 'replies' : 'reply'}
+          </div>
+        )}
+        {replies.length > 0 && show && (
+          <div
+            className="show-reply"
+            onClick={() => {
+              setShow(false);
+            }}
+          >
+            <IoMdArrowDropup />
+            Hide {replies.length > 1 ? 'replies' : 'reply'}
           </div>
         )}
         {show && replies.length > 0 && (

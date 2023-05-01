@@ -348,39 +348,46 @@ img {
 }
 
 .login {
-  background-color: #ecdfcd;
+  background-color: #4285f4;
   padding: 10px;
   align-items: center;
 }
+.login div {
+  margin-bottom: 10px;
+  color: white;
+  /* font-family: 'Roboto'; */
+  /* font-weight: medium; */
+}
 .login button {
   background-color: white;
+  font-family: 'Roboto';
+  color: rgba(0, 0, 0, 0.54);
   /* border-color: #f1356d; */
-  border-radius: 5px;
+  border-radius: 3px;
   border: none;
-  font-size: 16px;
-  font: 'Roboto';
-  font-weight: bolder;
+  font-size: 14px;
+
+  font-weight: bold;
   padding: 8px;
   min-height: 40px;
   display: inline-flex;
   align-items: center;
   line-height: 1.2;
-  gap: 10px;
+  gap: 24px;
 }
 
 .login button:hover {
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
 .essay {
-  margin-top: 50px;
-  margin-right: 20px;
-  padding-right: 20px;
-  width: 80%;
+  /* margin-top: 50px; */
+  /* width: 90%; */
 }
 .action {
   background-color: white;
   margin-top: 30px;
   margin-bottom: 50px;
+  margin-right: 20px;
   width: 200px;
   height: 50px;
   /* margin: 5px; */
@@ -391,6 +398,13 @@ img {
   cursor: pointer;
   padding: 10px;
   box-shadow: 5px 5px #d3c7b7;
+}
+
+.skip {
+  height: 30px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  align-items: right;
 }
 .essay-action {
   background-color: white;
@@ -671,7 +685,8 @@ Comments
   font-size: 16px;
   padding: 8px 16px;
   background: #a79b8d;
-  border-radius: 8px;
+  border-radius: 3px;
+  border: none;
   color: white;
 }
 
@@ -735,7 +750,11 @@ Comments
   font-size: 16px;
 }
 
-.comment-actions {
+.text {
+  white-space: pre-wrap;
+}
+.comment-actions,
+.show-reply {
   display: flex;
   font-size: 12px;
   color: rgb(51, 51, 51);
@@ -743,9 +762,12 @@ Comments
   margin-top: 8px;
   gap: 5px;
   align-items: center;
-  color: #f1356d;
 }
 
+.show-reply {
+  color: #a2c2c4;
+  font-weight: bold;
+}
 .comment-action,
 .vote-count {
   margin-right: 8px;

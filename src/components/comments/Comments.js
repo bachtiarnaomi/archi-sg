@@ -1,5 +1,6 @@
 import { useState, useEffect, useContext } from 'react';
 import axios from 'axios';
+import ReactGA from 'react-ga4';
 import CommentForm from './CommentForm';
 import Comment from './Comment';
 import {
@@ -16,14 +17,15 @@ import Login from '../auth/login';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { auth } from '../../helpers/firebase';
 
-const Comments = ({ questionId }) => {
+const Comments = ({ questionId, year }) => {
   const [user, loading] = useAuthState(auth);
   const [backendComments, setBackendComments] = useState([]);
   const [topAnswers, setTopAnswers] = useState([]);
   const [activeComment, setActiveComment] = useState(null);
 
-  const { currQuestion, subCount, questions, isSub } = useContext(EssayContext);
-  console.log('user', user);
+  const { currQuestion, subCount, questions, isSub, paper } =
+    useContext(EssayContext);
+  // console.log('user', user);
   const rootComments = backendComments.filter(
     (comment) => comment.parentId == null
   );
@@ -81,12 +83,25 @@ const Comments = ({ questionId }) => {
     //   setBackendComments([comment, ...backendComments]);
     //   setActiveComment(null);
     // });
+    ReactGA.event({
+      category: 'ANSWERS',
+      action: 'POST',
+      label: 'NEW',
+    });
     const username = user?.displayName || 'Anonymous User';
     const userId = user?.uid || null;
     const createdAt = new Date().toISOString();
     console.log('the user', user, username, userId);
-    const answer = { text, parentId, createdAt, username, userId, questionId };
-    axios.post('http://localhost:3003/answer/add', answer).then((comment) => {
+    const newId = year + '-' + paper + '-' + questionId;
+    const answer = {
+      text,
+      parentId,
+      createdAt,
+      username,
+      userId,
+      questionId: newId,
+    };
+    axios.post('https://www.archi.sg/answer/add', answer).then((comment) => {
       setBackendComments([comment.data, ...backendComments]);
       console.log([comment.data, ...backendComments]);
       setActiveComment(null);
@@ -96,7 +111,7 @@ const Comments = ({ questionId }) => {
     if (window.confirm('Are you sure you want to remove comment?')) {
       console.log('delete comment', commentId);
       axios
-        .delete(`http://localhost:3003/answer/delete/${commentId}`)
+        .delete(`https://www.archi.sg/answer/delete/${commentId}`)
         .then((comment) => {
           console.log('deleted');
           const updatedBackendComments = backendComments.filter(
@@ -123,7 +138,7 @@ const Comments = ({ questionId }) => {
   const addVote = (voteCount, commentId) => {
     console.log('adding vote', voteCount);
     axios
-      .post('http://localhost:3003/answer/vote', { commentId })
+      .post('https://www.archi.sg/answer/vote', { commentId })
       .then((response) => {
         // Update the vote count on the page
         const newVoteCount = parseInt(voteCount.textContent) + 1;
@@ -139,7 +154,7 @@ const Comments = ({ questionId }) => {
   };
   const decreaseVote = (voteCount, commentId) => {
     axios
-      .post('http://localhost:3003/answer/vote', { commentId })
+      .post('https://www.archi.sg/answer/vote', { commentId })
       .then((response) => {
         // Update the vote count on the page
         const newVoteCount = parseInt(voteCount.textContent) - 1;
@@ -153,8 +168,9 @@ const Comments = ({ questionId }) => {
       });
   };
   useEffect(() => {
+    const query = year + '-' + paper + '-' + questionId;
     axios
-      .get(`http://localhost:3003/answer/get-by-question/${questionId}`)
+      .get(`https://www.archi.sg/answer/get-by-question/${query}`)
       .then((res) => {
         res.data.sort(
           (a, b) =>
@@ -168,9 +184,9 @@ const Comments = ({ questionId }) => {
       });
   }, [questionId]);
   useEffect(() => {
-    console.log('mounting component');
+    const query = year + '-' + paper + '-' + questionId;
     axios
-      .get(`http://localhost:3003/answer/get-by-question/${questionId}`)
+      .get(`https://www.archi.sg/answer/get-by-question/${query}`)
       .then((res) => {
         res.data.sort(
           (a, b) =>
@@ -180,16 +196,30 @@ const Comments = ({ questionId }) => {
         const newTopAnswers = getTopAnswer(res.data);
         if (newTopAnswers) setTopAnswers(newTopAnswers);
         else setTopAnswers([]);
-        console.log('answers', res.data);
+        // console.log('answers', res.data);
       });
+    // console.log('mounting component', paper + '-' + questionId);
+    // axios
+    //   .get(
+    //     `http://localhost:3003/answer/get-by-question/${
+    //       paper + '-' + questionId
+    //     }`
+    //   )
+    //   .then((res) => {
+    //     res.data.sort(
+    //       (a, b) =>
+    //         new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime()
+    //     );
+    //     setBackendComments(res.data);
+    //     const newTopAnswers = getTopAnswer(res.data);
+    //     if (newTopAnswers) setTopAnswers(newTopAnswers);
+    //     else setTopAnswers([]);
+    //     console.log('answers', res.data);
+    //   });
   }, []);
 
   return (
     <div className="comments">
-      {!user && (
-        <div>You are not signed in. Answers posted will be anonymous.</div>
-      )}
-      {user && <div>logged in!</div>}
       <Login />
       <h3 className="comments-title">
         {`Answers for ${questionId}`}
@@ -203,6 +233,7 @@ const Comments = ({ questionId }) => {
         handleSubmit={addComment}
         username={user?.displayName}
         userId={user?.uid}
+        signedin={user ? true : false}
       />
       <div className="comments-container">
         {topAnswers.map((rootComment) => (

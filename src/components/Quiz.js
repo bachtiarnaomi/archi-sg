@@ -5,18 +5,28 @@ import { QuizContext } from '../helpers/Contexts';
 
 function Quiz({ year }) {
   const { gameState, setGameState } = useContext(QuizContext);
+  const { paper, setPaper } = useContext(QuizContext);
+  const { essays, setEssays } = useContext(QuizContext);
   const { score, setScore } = useContext(QuizContext);
   const [currQuestion, setCurrQuestion] = useState(0);
   const [selectedOption, setSelectedOption] = useState('');
   const { questions, setQuestions } = useContext(QuizContext);
   const { answers, setAnswers } = useContext(QuizContext);
   useEffect(() => {
-    console.log('get quiz', year);
-    axios.get(`http://localhost:3003/quiz/get-by-year/${year}`).then((res) => {
-      // axios.get(`https://www.archi.sg/quiz/get-by-year/${year}`).then((res) => {
-      console.log('res', res);
-      setQuestions(res.data[0].mcq);
-    });
+    if (paper == '1') {
+      axios.get(`http://www.archi.sg/quiz/get-by-year/${year}`).then((res) => {
+        // axios.get(`https://www.archi.sg/quiz/get-by-year/${year}`).then((res) => {
+        console.log('res', res);
+        setQuestions(res.data[0].mcq);
+        setEssays(res.data[0].essay);
+      });
+    } else if (paper == '2') {
+      axios.get(`http://www.archi.sg/quiz2/get-by-year/${year}`).then((res) => {
+        // axios.get(`https://www.archi.sg/quiz/get-by-year/${year}`).then((res) => {
+        setQuestions(res.data[0].mcq);
+        setEssays(res.data[0].essay);
+      });
+    }
   }, []);
   const ref = useRef(null);
   const handleNextQuestion = () => {
@@ -59,16 +69,13 @@ function Quiz({ year }) {
   return (
     <div className="quiz">
       <h1>{year} Quiz</h1>
+      <button className="skip" onClick={() => setGameState('essay')}>
+        Skip to essay
+      </button>
       <ProgressBar
         currQuestion={currQuestion}
         nQuestions={questions.length}
       ></ProgressBar>
-      <button
-        className="action"
-        onClick={() => (window.location.href = `/${year}/paper2`)}
-      >
-        Next Segment
-      </button>
       <p className="prompt">{questions[currQuestion].prompt}</p>
       <div ref={ref} id="options">
         <button

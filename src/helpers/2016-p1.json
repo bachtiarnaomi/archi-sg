@@ -1,0 +1,179 @@
+{
+  "year": 2016,
+  "mcq": [
+    {
+      "prompt": "Under the Architects Act(Cap. 12), which of the following is/are true? \ni) An architect shall not act as an architect for his own house. \nii) An architect may exhibit his name on a building which is being constructed, altered or extended, in relation to which he is rendering architectural services \niii) An architect may sign on buildings which have been designed by him. \niv) An architect shall not accept a commission or engagement to render architectural services for a client while a claim for outstanding fees by another architect remains unsatisfied.",
+      "optionA": "i, ii & iii",
+      "optionB": "ii, iii & iv",
+      "optionC": "i, iii & iv",
+      "optionD": "all of the above",
+      "answer": "B"
+    },
+    {
+      "prompt": "Which of the following is/are considered ABC water design features? \ni) Bio-retention Swales \nii) Planter Boxes \niii) Pumped Discharge Detention Tanks \niv) Porous Pavements",
+      "optionA": "i only",
+      "optionB": "i & 3",
+      "optionC": "i, ii & iv",
+      "optionD": "all of the above",
+      "answer": "D"
+    },
+    {
+      "prompt": "Which of the following statements with regards to URA's GFA Apportionment Rules for Common Areas in Mixed Use Development are true? \ni) Attributable space referes to a space which is exclusively used for a specific purpose. The GFA will be apportioned to the specific use. \nii) The GFA of a common area where it is not exclusively used for a specific purpose, shall be apportioned based on the weighted average, pegged to the prescribed use quantum mix in the Masterplan. \nFor White site developments with multiple proposed use, the non-attributable common areas will be apportioned based on a simple avereage of the uses in the development.",
+      "optionA": "i & ii",
+      "optionB": "i, iii & iv",
+      "optionC": "ii, iii & iv",
+      "optionD": "all of the above",
+      "answer": "D",
+      "explanation": "All is true, refer to DC circular of GFA Apportionment. https://www.ura.gov.sg/Corporate/Guidelines/Circulars/dc15-07"
+    },
+    {
+      "prompt": "Under the Fire Code 2013, all floors in a building including the roof level shall be considered as habitable floors. The roof level can be considered as non-habitable if it is not used for any purpose other than housing M&E equipment/plants. \n\nWhich of the following can be housed on a non-habitable roof? \ni) Lift motors \nii) Photovoltaic panels \niii) Cooling towers \niv) Back-up generators",
+      "optionA": "i & iii",
+      "optionB": "i, ii & iii",
+      "optionC": "i, iii & iv",
+      "optionD": "all of the above",
+      "answer": "D",
+      "explanation": "All are non-habitable roof equipments"
+    },
+    {
+      "prompt": "Which of the following statements are true to the Workplace Safety and Health (Design for Safety) Regulations 2015? \ni) The Regulations is only applicable to all projects with contract sum of $10 million or more. \nii) The developer is able to delegate his Developer's Duties to a DFS professional. However, the developer is still responsible for the DFS professional's performance. \niii) The designer shall not produce designs that cannot be constructed, maintained, used or demolished in a reasonably safe manner. \nThe contractor is required to inform the person who appointed him of any foreseeable design risk that the structure poses to ensure that the project is carried out without risks to safety or health of any person who may be affected by it.",
+      "optionA": "iii & iv",
+      "optionB": "ii & iii",
+      "optionC": "i, iii & iv",
+      "optionD": "all of the above",
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "prompt": "Which of the following is true? \nFor construction work on or after 1st September 2011:",
+      "optionA": "No work is allowed from 10.00pm on Saturday/eve of Public Holiday to 10.00am on Sunday/Public Holiday.",
+      "optionB": "No work allowed from 7.00pm on Saturday/eve of Public Holiday to 7.00am on Sunday/Public Holiday.",
+      "optionC": "No work allowed from 10.00pm on Saturday/eve of Public Holiday to 7.00am on the following Monday/day after the Public Holiday.",
+      "optionD": "No work allowed from 7.00pm on Saturday/eve of Public Holiday to 10.00am on Sunday/Public Holiday.",
+      "answer": "C",
+      "explanation": "https://www.nea.gov.sg/our-services/pollution-control/noise-pollution/construction-noise-control \nAfter 10pm on Sat/eve of PH to 7am on the following Monday/day after PH"
+    },
+    {
+      "prompt": "A licensed housing developer shall deposit any instalments of purchase money and/or loan for the construction of a building project into the Project Account of the building project. \nA certificate from the Qualified Person in charge of the building project is required for the release of payment for which following works: \ni) Foundation works \nii) Soil investigation \nEarth works \niv) Cable detection works",
+      "optionA": "i & iii",
+      "optionB": "i, ii & iii",
+      "optionC": "i, iii & iv",
+      "optionD": "all of the above",
+      "answer": "B",
+      "explanation": "Housing Developer Act. Cable detection works not included"
+    },
+    {
+      "prompt": "In complying with the BCA's requirements on daylight reflectance of building facade materials, which of the following is/are deemed acceptable? \ni) The glass for the building work has a daylight reflectance not exceeding 20% \nii) The roof, inclined at angle 10 degrees from the horizontal plane of the building has a specular reflectance not exceeding 10% \niii) The roof, inclined at angle of more than 20 degrees from the horizontal plane of the building has a daylight reflectance not exceeding 20% and a specular reflectance not exceeding 10% \niv) Emulsion paint on a plastered or concrete surfaces which has a specular reflectance not exceeding 10%",
+      "optionA": "i, ii & iv",
+      "optionB": "i, ii & iii",
+      "optionC": "i, iii & iv",
+      "optionD": "all of the above",
+      "answer": "D",
+      "explanation": "BCA Approved Solution P.3. \nAll are true."
+    },
+    {
+      "prompt": "Which of the statements with regard to SCDF's requirements for persons with disabilities (PWD) in an A&A work is true?",
+      "optionA": "A PWD Holding point shall be provided for an A&A works affecting the common corridor of a building under a single ownership in a non-strata title building.",
+      "optionB": "Industrial buildings that are exempted from barrier-free accessibility compliance under the BCA's Code of Accessibility in the Built Environment will still need to comply to PWD requirements.",
+      "optionC": "Where an alteration work to a building affects smoke stop lobby, a PWD Holding Point and Distress communication means shall be incorporated to the affected floor.",
+      "optionD": "The provision of visual alarm system is not applicable to health care buildings that are exempted from PWD requirements.",
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "prompt": "Under the Housing Developers (Control and Licensing) Act, which of the followings is/are true? \nOn completion of a title survey, if the deficiency is more than 3% of the area stated in the Agreement, the Purchasing Price shall be reduced. \nii) On completion of a title survey, if the area of the Property is more than the area stated in the Agreement, the Purchasing Price shall be adjusted. \niii) The Purchaser shall pay for the changes to Specifications or approved plans if such changes are required by the Commissioner of Building Control or other relevant authorities. \niv) For any changes involving the substitution or use of cheaper materials or an omission of works as originally stated in the Specifications or approved plans, the Purchaser shall be entitled to a corresponding reduction in Purchasing Price.",
+      "optionA": "i & iv",
+      "optionB": "i, ii & iii",
+      "optionC": "i, ii & iv",
+      "optionD": "all of the above",
+      "answer": "A",
+      "explanation": ""
+    }
+  ],
+  "essay": [
+    {
+      "title": "Question 2",
+      "subtitle": "2.01",
+      "mainQuestion": "Home Owner A requests for an architectural design from you for his new landed house project gor his review prior to appointing you as the architect.\n \n How would you respond to such request?",
+      "subQuestions": [],
+      "marks": [2]
+    },
+    {
+      "title": "Question 2",
+      "subtitle": "2.02",
+      "mainQuestion": "Home Owner B requests you to carry out all the authorities' submission for his new house development with the understanding that the architectural design and drawings will be done by his friend who is an interior designer.\n \n How would you respond to such request?",
+      "subQuestions": [],
+      "marks": [2]
+    },
+    {
+      "title": "Question 2",
+      "subtitle": "2.03",
+      "mainQuestion": "Home Owner C wants to redevelop his bungalow into 2 detached dwellings. \n \n Advise the owner on the relevant requirements of URA and 2 technical departments.",
+      "subQuestions": [],
+      "marks": [6]
+    },
+    {
+      "title": "Question 2",
+      "subtitle": "2.04",
+      "mainQuestion": "Section A-A on Page 7 was drawn by a designer for an intermediate terrace h ouse in a designated 2-storey landed housing area.",
+      "subQuestions": [
+        "List the non-compliant issues under URA development control.",
+        "List the non-compliant issues under BCA and other technical departments' requirements."
+      ],
+      "marks": [6, 6]
+    },
+    {
+      "title": "Question 2",
+      "subtitle": "2.05",
+      "mainQuestion": "For a landed house project, what is the QP's role in getting the site and paper work ready for BCA's TOP inspection?",
+      "subQuestions": [],
+      "marks": [6]
+    },
+    {
+      "title": "Question 3",
+      "subtitle": "3.01",
+      "mainQuestion": "A developer approaches you regarding a potential redevelopment with site area 3200m², located along Cecil Street, approximately 100m from Raffles Place MRT station. It is zoned Commercial in Masterplan 2014. The plot ratio is indicated as 12.2+.",
+      "subQuestions": [
+        "What is the maximum GFA redevelopment potential?",
+        "Explain the difference between Development Charge and Differential Premium.",
+        "The land is leasehold, with 45 years remaining on its tenure. The site is located in Sector 7 on the DC map. Estimate the upgrading premium for topping-up of existing tenure to a fresh 99 year lease, along with increase in intensity of site assuming base GPR of 10.0. List the steps in arriving at your estimate and highlight your assumptions, if any.",
+        "How would you go about establishing the road reserve line of the site? You discover that a strip of land sits between your site boundary and road reserve line - advise your client of the possible implications."
+      ],
+      "marks": [2, 2, 4, 2]
+    },
+    {
+      "title": "Question 4",
+      "subtitle": "4.01",
+      "mainQuestion": "A client has engaged you to be the Architect for major A & A works on his existing Place-of-Workship (P.O.W.). The existing building has the following features: \n\nBuilt: 1985 \nSite area: 3,000m² \nExisting Gross Floor Area: 4,200m² \nLocation: Within high-rise HDB estates \nBuilding Height: 4-storey-building \nLTA (Vehicular Parking) Zone: Zone 2\n\nThe client requested you to explore the feasibility of maximizing the plot ratio of the P.O.W.",
+      "subQuestions": [
+        "What is the maximum allowable building height, maximum number of storeys and plot ratio of the P.O.W.?",
+        "The client wishes to use all the additional area for a new administrative office and kindergarten.\nHow would you carry out the computation for the allowable area distribution for P.O.W. under the URA guidelines?"
+      ],
+      "marks": [5, 5]
+    },
+    {
+      "title": "Question 4",
+      "subtitle": "4.02",
+      "mainQuestion": "A client has engaged you to be the Architect for major A & A works on his existing Place-of-Workship (P.O.W.). The existing building has the following features:\n\nBuilt: 1985\nSite area: 3,000m²\nExisting Gross Floor Area: 4,200m²\nLocation: Within high-rise HDB estates\nBuilding Height: 4-storey-building\nLTA (Vehicular Parking) Zone: Zone 2\n\nRefer to the existing 2nd Storey Floor Plan on Page 11 showing the main hall with fixed seating of 500 seats. The entire building is currently sprinkler protected.",
+      "subQuestions": [
+        "Verify by calculation whether or not the current exit staircase width provisions are sufficient for the occupancy load of the 2nd storey.",
+        "The floor area of the Hall is 600m². What are the relevant Smoke Control Systems that you will need to consider for the main sanctuary?"
+      ],
+      "marks": [6, 4]
+    },
+    {
+      "title": "Question 4",
+      "subtitle": "4.03",
+      "mainQuestion": "A client has engaged you to be the Architect for major A & A works on his existing Place-of-Workship (P.O.W.). The existing building has the following features:\n\nBuilt: 1985\nSite area: 3,000m²\nExisting Gross Floor Area: 4,200m²\nLocation: Within high-rise HDB estates\nBuilding Height: 4-storey-building\nLTA (Vehicular Parking) Zone: Zone 2\n\nCurrently the carpark provisions in the basement and 1st storey are in the form of regular carpark lots in full compliance to the LTA (Vehicular Parking) requirements. Assuming that after feasibility studies and budgetary considerations, the final GFA and seating capacity breakdwon is as follows:\n\n-Main Hall: 500 fixed seats\n-Other prayer area: 2,760m²\n-Offices: 100m²\n-Kindergarten: 300m²\n\nCompute the vehicular parking requirements. (including handicap lots).",
+      "subQuestions": [],
+      "marks": [5]
+    },
+    {
+      "title": "Question 4",
+      "subtitle": "4.04",
+      "mainQuestion": "Due to the increase in GFA, new air-conditioning compressor units (CUs) will need to be located on the roof. The only available space is at a corner of the building facing the neighboring HDB block.\n\nAs the Architect, what are the authorities' issues that you will need to consider in relation to the new CUs?",
+      "subQuestions": [],
+      "marks": [5]
+    }
+  ]
+}

@@ -10,17 +10,17 @@ import { AuthProvider } from 'react-auth-kit';
 import Login from './auth/login';
 
 function Essay({ year }) {
-  const [questions, setQuestions] = useState([]);
+  const { essays, setEssays, paper } = useContext(QuizContext);
   const [currQuestion, setCurrQuestion] = useState(0);
   const [subCount, setSubCount] = useState(0);
   const [isSub, setSub] = useState(false);
   const [questionId, setQuestionId] = useState('');
-  questions[currQuestion]?.subQuestions[subCount] &&
-    String.fromCharCode(subCount + 97);
+
   useEffect(() => {
-    setQuestions(data[year]);
-    console.log('data', data);
-    const qn = data[year][0];
+    // setQuestions(data[year]);
+    console.log('load essay');
+    console.log('essays', essays);
+    const qn = essays[0];
     let newId = qn?.subtitle;
     if (qn?.subQuestions[subCount]) {
       newId += String.fromCharCode(subCount + 97);
@@ -30,8 +30,8 @@ function Essay({ year }) {
   }, []);
 
   useEffect(() => {
-    let newId = questions[currQuestion]?.subtitle;
-    if (questions[currQuestion]?.subQuestions[subCount]) {
+    let newId = essays[currQuestion]?.subtitle;
+    if (essays[currQuestion]?.subQuestions[subCount]) {
       newId += String.fromCharCode(subCount + 97);
     }
     setQuestionId(newId);
@@ -41,8 +41,8 @@ function Essay({ year }) {
       <h1>{year} PPE</h1>
       <EssayContext.Provider
         value={{
-          questions,
-          setQuestions,
+          essays,
+          paper,
           currQuestion,
           setCurrQuestion,
           subCount,
@@ -53,9 +53,8 @@ function Essay({ year }) {
       >
         <EssayQuestion />
         <hr />
-
-        <Comments questionId={questionId} />
-        {/* essay answers */}
+        {questionId && <Comments questionId={questionId} year={year} />}
+        essay answers
       </EssayContext.Provider>
     </div>
   );

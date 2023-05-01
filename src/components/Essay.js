@@ -18,15 +18,15 @@ function Essay({ year }) {
 
   useEffect(() => {
     // setQuestions(data[year]);
-    console.log('load essay');
-    console.log('essays', essays);
+    // console.log('load essay');
+    // console.log('essays', essays);
     const qn = essays[0];
     let newId = qn?.subtitle;
     if (qn?.subQuestions[subCount]) {
       newId += String.fromCharCode(subCount + 97);
     }
     setQuestionId(newId);
-    console.log('newid', newId);
+    // console.log('newid', newId);
   }, []);
 
   useEffect(() => {
@@ -54,7 +54,6 @@ function Essay({ year }) {
         <EssayQuestion />
         <hr />
         {questionId && <Comments questionId={questionId} year={year} />}
-        essay answers
       </EssayContext.Provider>
     </div>
   );

@@ -15,9 +15,9 @@ function EssayQuestion() {
   } = useContext(EssayContext);
 
   useEffect(() => {
-    console.log('getting the qn');
+    // console.log('getting the qn');
     if (!essays[currQuestion] && currQuestion == 0) {
-      console.log('curr qn', currQuestion);
+      // console.log('curr qn', currQuestion);
       return;
     }
     if (currQuestion >= essays.length) console.log('ESSAY ENDS');

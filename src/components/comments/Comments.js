@@ -71,7 +71,7 @@ const Comments = ({ questionId, year }) => {
         topAnswers.push(comment);
         maxVote = comment.vote;
       } else {
-        console.log('top answers', topAnswers);
+        // console.log('top answers', topAnswers);
         return topAnswers;
       }
     }

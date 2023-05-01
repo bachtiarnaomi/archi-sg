@@ -126,13 +126,8 @@ const Comment = ({
             style={hasVoted ? { fill: 'gray' } : { fill: 'black' }}
             onClick={(e) => {
               e.preventDefault();
-              console.log('e', e.target);
+              // console.log('e', e.target);
               if (hasVoted) {
-                console.log(
-                  'cookie',
-                  getCookie(`comment_${comment._id}_voted`)
-                );
-                console.log('you have voted');
                 return;
               }
               addVote(
@@ -147,7 +142,6 @@ const Comment = ({
             onClick={(e) => {
               e.preventDefault();
               if (hasVoted) {
-                console.log('you have voted');
                 return;
               }
               e.target.style.stroke = 'red';

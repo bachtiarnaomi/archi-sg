@@ -4,6 +4,8 @@ import CommentForm from './CommentForm';
 import * as FaIcons from 'react-icons/fa';
 import { useState } from 'react';
 import { IoMdArrowDropdown, IoMdArrowDropup } from 'react-icons/io';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import { auth } from '../../helpers/firebase';
 
 const Comment = ({
   comment,
@@ -20,6 +22,7 @@ const Comment = ({
   parentId = null,
   topComment = false,
 }) => {
+  const [user, loading] = useAuthState(auth);
   const canReply = /* Boolean(currentUserId) */ parentId == null;
   const canEdit = currentUserId === comment.userId;
   const canDelete = currentUserId === comment.userId;
@@ -160,6 +163,7 @@ const Comment = ({
           <CommentForm
             submitLabel="Reply"
             handleSubmit={(text) => addComment(text, replyId)}
+            signedin={user ? true : false}
           />
         )}
         {replies.length > 0 && !show && (
